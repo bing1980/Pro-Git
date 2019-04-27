@@ -5,10 +5,12 @@ over time, see who last modified something that might be causing a problem, who 
 
 ### Local Version Control Systems
 Local VCSs that had a simple database that kept all changes to files under revision control.
+
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/lvcs.PNG)
 
 ### Centrialized Version Control Systems
 Centrialized Version Control Systems(CVSs) have a single server that contains all the versioned files, and a number of clients that check out files from that central place. The downside of CVSs is that once the server goes down, nobody can collabrate or save versioned changes.
+
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/cvcs.PNG)
 
 
