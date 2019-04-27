@@ -9,4 +9,4 @@ over time, see who last modified something that might be causing a problem, who 
 
 ### Centrialized Version Control Systems
   Centrialized Version Control Systems(CVSs) have a single server that contains all the versioned files, and a number of clients that check out files from that central place.
-![image](https://github.com/bing1980/Pro-Git/blob/master/img/cvs.PNG)
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/cvcs.PNG)
