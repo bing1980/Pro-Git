@@ -33,3 +33,9 @@ Git doesn’t think of or store its data this way. Instead, Git thinks of its da
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/store_data_git.PNG)
 
 ### Nearly Every Operation Is Local
+Most operations in Git need only local files and resources to operate — generally no information is needed from another computer on your network. If you’re used to a CVCS where most operations have that network latency overhead, this aspect of Git will make you think that the gods of speed have blessed Git with unworldly powers. Because you have the entire history of the project right there on your local disk, most operations seem almost instantaneous.
+
+### Git Has Integrity
+The mechanism that Git uses for this checksumming is called a SHA-1 hash. This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. A SHA-1 hash looks something like this: 
+      24b9da6552252987aa493b52f8696cd6d3b00373
+You will see these hash values all over the place in Git because it uses them so much. In fact, Git stores everything in its database not by file name but by the hash value of its contents.
