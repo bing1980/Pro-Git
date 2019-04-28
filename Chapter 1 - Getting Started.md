@@ -54,3 +54,5 @@ The basic Git workflow goes something like this:
 1. You modify files in your working tree.
 2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+## First-Time Git Setup
