@@ -24,5 +24,10 @@ In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don’t just check 
 
 ### Snapshots, Not Differences
 The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
-These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as delta-based version control).
+These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as delta-based versiongitol).)
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/store_data_others.PNG)
+
 Git doesn’t think of or store its data this way. Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem.
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/store_data_git.PNG)
