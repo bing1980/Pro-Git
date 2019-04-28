@@ -45,3 +45,7 @@ Git has three main states that your files can reside in: ***committed, modified*
 * Committed means that the data is safely stored in your local database.
 * Modified means that you have changed the file but have not committed it to your database yet.
 * Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+
+This leads us to the three main sections of a Git project: the Git directory, the working tree, and the staging area.
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/three_states.PNG)
