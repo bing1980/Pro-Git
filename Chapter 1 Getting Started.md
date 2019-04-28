@@ -18,3 +18,11 @@ Centrialized Version Control Systems(CVSs) have a single server that contains al
 In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.
 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/dvcs.PNG)
+
+
+## What is Git ?
+
+### Snapshots, Not Differences
+The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
+These other systems (CVS, Subversion, Perforce, Bazaar, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as delta-based version control).
+Git doesn’t think of or store its data this way. Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem.
