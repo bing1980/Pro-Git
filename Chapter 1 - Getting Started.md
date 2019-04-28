@@ -38,11 +38,10 @@ Most operations in Git need only local files and resources to operate — genera
 ### Git Has Integrity
 The mechanism that Git uses for this checksumming is called a SHA-1 hash. This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. A SHA-1 hash looks something like this: 
       <br/>**24b9da6552252987aa493b52f8696cd6d3b00373**</br>
-
 You will see these hash values all over the place in Git because it uses them so much. In fact, Git stores everything in its database not by file name but by the hash value of its contents.
 
 ### The Three States
-Git has three main states that your files can reside in: *committed, modified, and staged:*
+Git has three main states that your files can reside in: ***committed, modified**, and **staged**:*
 * Committed means that the data is safely stored in your local database.
 * Modified means that you have changed the file but have not committed it to your database yet.
 * Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
