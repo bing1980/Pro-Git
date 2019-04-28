@@ -49,3 +49,8 @@ Git has three main states that your files can reside in: ***committed, modified*
 This leads us to the three main sections of a Git project: the Git directory, the working tree, and the staging area.
 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/three_states.PNG)
+
+The basic Git workflow goes something like this:
+1. You modify files in your working tree.
+2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
