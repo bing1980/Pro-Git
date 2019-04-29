@@ -64,3 +64,9 @@ The first thing you should do when you install Git is to set your user name and 
 * **$ git config --global user.name "John Doe"**
 * **$ git config --global user.email johndoe@example.com**
 ### Your Editor
+You can configure the default text editor that will be used when Git needs you to type in a message. If not configured, Git uses your system’s default editor.   
+If you want to use a different text editor, such as Emacs, you can do the following:  
+* **$ git config --global core.editor emacs**  
+On a Windows system, if you want to use a different text editor, you must specify the *full path* to its executable file.
+For example, if you have a 32-bit editor **Notepad++**, on a 64-bit system, the program will be installed in C:\Program Files(x86):  
+* **$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"**
