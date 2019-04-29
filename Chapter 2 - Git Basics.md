@@ -10,4 +10,4 @@ If you want to start version-controlling existing files (as opposed to an empty 
 * $ git add *.c
 * $ git add LICENSE
 * $ git commit -m 'initial project version'
-
+### Cloning an Existing Repository
