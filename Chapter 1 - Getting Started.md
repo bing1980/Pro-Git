@@ -56,6 +56,6 @@ The basic Git workflow goes something like this:
 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 
 ## First-Time Git Setup
-Git comes with a tool called <span style="color:red"> git config </span> that lets you get and set configuration variables that control all aspects of how Git looks and operates.  
+Git comes with a tool called <p style="color:red"> "git config" </p> that lets you get and set configuration variables that control all aspects of how Git looks and operates.  
 You can view all of your settings and where they are coming from:
 <br/>**git config --list --show-origin**</br>
