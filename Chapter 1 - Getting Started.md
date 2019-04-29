@@ -70,3 +70,6 @@ If you want to use a different text editor, such as Emacs, you can do the follow
 On a Windows system, if you want to use a different text editor, you must specify the *full path* to its executable file.
 For example, if you have a 32-bit editor **Notepad++**, on a 64-bit system, the program will be installed in C:\Program Files(x86):  
 * **$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"**
+### Checking Your Settings
+You can use the git ***config --list*** command to list all the settings Git can find at that point:  
+You can also check what Git thinks a specific key’s value is by typing ***git config <key>***
