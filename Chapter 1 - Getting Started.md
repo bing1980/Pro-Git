@@ -56,7 +56,10 @@ The basic Git workflow goes something like this:
 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 
 ## First-Time Git Setup
-Git comes with a tool called **git config** that lets you get and set configuration variables that control all aspects of how Git looks and operates.  
+Git comes with a tool called *git config* that lets you get and set configuration variables that control all aspects of how Git looks and operates.  
 You can view all of your settings and where they are coming from:
-<br/>**git config --list --show-origin**</br>
-
+<br/>**$ git config --list --show-origin**</br>
+### Your Identity
+The first thing you should do when you install Git is to set your user name and email address.  
+* **$ git config --global user.name "John Doe"**
+* **$ git config --global user.email johndoe@example.com**
