@@ -72,4 +72,4 @@ For example, if you have a 32-bit editor **Notepad++**, on a 64-bit system, the 
 * **$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"**
 ### Checking Your Settings
 You can use the git ***config --list*** command to list all the settings Git can find at that point. 
-You can also check what Git thinks a specific key’s value is by typing ***git config <key/>***
+You can also check what Git thinks a specific key’s value is by typing ***git config \<key>***
