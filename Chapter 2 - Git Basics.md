@@ -12,7 +12,8 @@ If you want to start version-controlling existing files (as opposed to an empty 
 * $ git commit -m 'initial project version'
 ### Cloning an Existing Repository
 You clone a repository with git clone <url>. For example, if you want to clone the Git linkable library called libgit2, you can do so like this:  
-* $ git clone https://github.com/libgit2/libgit2  
+  * $ git clone https://github.com/libgit2/libgit2
 If you want to clone the repository into a directory named something other than libgit2, you can specify the new directory name as an additional argument:  
-* $ git clone https://github.com/libgit2/libgit2 mylibgit
+  * $ git clone https://github.com/libgit2/libgit2 mylibgit
+  
 ### Recording Changes to the Repository
