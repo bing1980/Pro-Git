@@ -21,3 +21,4 @@ Remember that each file in your working directory can be in one of two states: *
 Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/lifecycle.PNG)
 
+#### Checking the Status of Your Files
