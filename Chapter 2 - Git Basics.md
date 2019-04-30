@@ -92,5 +92,9 @@ If you run **git status -s** or **git status --short** you get a far more simpli
 New files that aren’t tracked have a **??** next to them, new files that have been added to the staging area have an **A**, modified files have an **M** and so on.  
 So for example in that output, the **README** file is modified in the working directory but not yet staged, while the **lib/simplegit.rb** file is modified and staged. The **Rakefile** was modified, staged and then modified again, so there are changes to it that are both staged and unstaged.
 ### Ignoring Files
+Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. In such cases, you can create a file listing patterns to match them named **.gitignore**. Here is an example .gitignore file:  
+> **$ cat .gitignore**
+> \*.[oa]  
+> \*~
 
 
