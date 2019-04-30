@@ -93,8 +93,18 @@ New files that aren’t tracked have a **??** next to them, new files that have 
 So for example in that output, the **README** file is modified in the working directory but not yet staged, while the **lib/simplegit.rb** file is modified and staged. The **Rakefile** was modified, staged and then modified again, so there are changes to it that are both staged and unstaged.
 ### Ignoring Files
 Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. In such cases, you can create a file listing patterns to match them named **.gitignore**. Here is an example .gitignore file:  
-> **$ cat .gitignore**
-> \*.[oa]  
+> **$ cat .gitignore**  
+> \*.[oa]    
 > \*~
+The first line tells Git to ignore any files ending in “.o” or “.a” — object and archive files that may be the product of building your code. The second line tells Git to ignore all files whose names end with a tilde (~).  
+
+The rules for the patterns you can put in the .gitignore file are as follows:  
+* Blank lines or lines starting with # are ignored.
+* Standard glob patterns work, and will be applied recursively throughout the entire working tree.
+* You can start patterns with a forward slash (/) to avoid recursivity.
+* You can end patterns with a forward slash (/) to specify a directory.
+* You can negate a pattern by starting it with an exclamation point (!).
+
+### Viewing Your Staged and Unstaged Changes
 
 
