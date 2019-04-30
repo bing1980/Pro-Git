@@ -82,12 +82,12 @@ To stage it, you run the **git add** command.
 
 ### Short Status
 If you run **git status -s** or **git status --short** you get a far more simplified output from the command:  
-> **$ git status -s**
-> M README
-> MM Rakefile
-> A lib/git.rb
-> M lib/simplegit.rb
-> ?? LICENSE.txt
+> **$ git status -s**  
+> M README  
+> MM Rakefile  
+> A lib/git.rb  
+> M lib/simplegit.rb  
+> ?? LICENSE.txt  
 
 
 
