@@ -39,3 +39,13 @@ README
 
 nothing added to commit but untracked files present (use "git add" to track)
 #### Tracking New Files
+In order to begin tracking a new file, you use the command **git add**.  
+**$ git add README**  
+If you run your status command again, you can see that your README file is now tracked and staged to be committed:  
+**$ git status**
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+Changes to be committed:  
+(use "git reset HEAD <file>..." to unstage)  
+new file: README
+#### Staging Modified Files
