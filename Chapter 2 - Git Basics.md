@@ -22,45 +22,48 @@ Untracked files are everything else — any files in your working directory that
 ### Checking the Status of Your Files
 The main tool you use to determine which files are in which state is the ***git status*** command.  
 If you run this command directly after a clone, you should see something like this:  
-**$ git status**    
-On branch master  
-Your branch is up-to-date with 'origin/master'.  
-nothing to commit, working directory clean  
+> **$ git status**    
+> On branch master  
+> Your branch is up-to-date with 'origin/master'.  
+> nothing to commit, working directory clean  
 
 Let’s say you add a new file to your project, a simple **README** file. If the file didn’t exist before, and you run git status, you see your untracked file like so:  
-**$ echo 'My Project' > README  
-$ git status**  
-On branch master  
-Your branch is up-to-date with 'origin/master'.  
-Untracked files:  
-(use "git add \<file>..." to include in what will be committed)    
-
-README
-
-nothing added to commit but untracked files present (use "git add" to track)
+> **$ echo 'My Project' > README  
+> $ git status**  
+> On branch master  
+> Your branch is up-to-date with 'origin/master'.  
+> Untracked files:  
+> (use "git add \<file>..." to include in what will be committed)    
+> 
+> README
+> 
+> nothing added to commit but untracked files present (use "git add" to track)
 ### Tracking New Files
 In order to begin tracking a new file, you use the command **git add**.  
-**$ git add README**  
+> **$ git add README**  
 If you run your status command again, you can see that your README file is now tracked and staged to be committed:  
-**$ git status**
-On branch master  
-Your branch is up-to-date with 'origin/master'.  
-Changes to be committed:  
-(use "git reset HEAD <file>..." to unstage)  
-new file: README
+> **$ git status**
+> On branch master  
+> Your branch is up-to-date with 'origin/master'.  
+> Changes to be committed:  
+> (use "git reset HEAD <file>..." to unstage)  
+>   
+> new file: README
  
 ### Staging Modified Files
 Let’s change a file that was already tracked. If you change a previously tracked file called **CONTRIBUTING.md** and then run your git status command again, you get something that looks like this:  
-**$ git status**  
-On branch master  
-Your branch is up-to-date with 'origin/master'.  
-Changes to be committed:  
-(use "git reset HEAD <file>..." to unstage)  
-new file: README  
-Changes not staged for commit:  
-(use "git add <file>..." to update what will be committed)  
-(use "git checkout -- <file>..." to discard changes in working directory)  
-modified: CONTRIBUTING.md
+> **$ git status**  
+> On branch master  
+> Your branch is up-to-date with 'origin/master'.  
+> Changes to be committed:  
+> (use "git reset HEAD <file>..." to unstage)  
+>   
+> new file: README  
+>   
+> Changes not staged for commit:  
+> (use "git add <file>..." to update what will be committed)  
+> (use "git checkout -- <file>..." to discard changes in working directory)  
+> modified: CONTRIBUTING.md
 
 The **CONTRIBUTING.md** file appears under a section named ***“Changes not staged for commit”*** — which means that a file that is tracked has been modified in the working directory but **not yet staged**.  
 To stage it, you run the **git add** command.  
