@@ -60,8 +60,20 @@ new file: README
 Changes not staged for commit:  
 (use "git add <file>..." to update what will be committed)  
 (use "git checkout -- <file>..." to discard changes in working directory)  
+modified: CONTRIBUTING.md
+
+The **CONTRIBUTING.md** file appears under a section named ***“Changes not staged for commit”*** — which means that a file that is tracked has been modified in the working directory but **not yet staged**.  
+To stage it, you run the **git add** command.  
+**$ git add CONTRIBUTING.md**  
+**$ git status**  
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+Changes to be committed:  
+(use "git reset HEAD <file>..." to unstage)  
+new file: README  
 modified: CONTRIBUTING.md  
  
-The CONTRIBUTING.md file appears under a section named “Changes not staged for commit” — which means that a file that is tracked has been modified in the working directory but **not yet staged**.  
+### Short Status
+
 
 
