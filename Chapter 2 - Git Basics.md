@@ -26,4 +26,13 @@ If you run this command directly after a clone, you should see something like th
 On branch master  
 Your branch is up-to-date with 'origin/master'.  
 nothing to commit, working directory clean**  
+Let’s say you add a new file to your project, a simple **README** file. If the file didn’t exist before, and you run git status, you see your untracked file like so:  
+**$ echo 'My Project' > README
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+(use "git add \<file>..." to include in what will be committed)
+README
+nothing added to commit but untracked files present (use "git add" to track)**
 
