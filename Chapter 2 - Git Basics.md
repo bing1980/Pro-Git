@@ -20,3 +20,10 @@ Remember that each file in your working directory can be in one of two states: *
 Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/lifecycle.PNG)
 #### Checking the Status of Your Files
+The main tool you use to determine which files are in which state is the ***git status*** command.  
+If you run this command directly after a clone, you should see something like this:  
+**$ git status
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+nothing to commit, working directory clean**  
+
