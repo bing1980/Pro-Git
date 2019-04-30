@@ -22,13 +22,13 @@ Untracked files are everything else — any files in your working directory that
 #### Checking the Status of Your Files
 The main tool you use to determine which files are in which state is the ***git status*** command.  
 If you run this command directly after a clone, you should see something like this:  
-***$ git status
+**$ git status
 On branch master  
 Your branch is up-to-date with 'origin/master'.  
-nothing to commit, working directory clean***  
+nothing to commit, working directory clean**  
 
 Let’s say you add a new file to your project, a simple **README** file. If the file didn’t exist before, and you run git status, you see your untracked file like so:  
-***$ echo 'My Project' > README  
+**$ echo 'My Project' > README  
 $ git status  
 On branch master  
 Your branch is up-to-date with 'origin/master'.  
@@ -37,5 +37,5 @@ Untracked files:
 
 **README**
 
-***nothing added to commit but untracked files present (use "git add" to track)***
+**nothing added to commit but untracked files present (use "git add" to track)**
 #### Tracking New Files
