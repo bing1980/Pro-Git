@@ -184,6 +184,28 @@ Changes to be committed:
 renamed: README.md -> README  
  
 ## Viewing the Commit History
+By default, with no arguments, **git log** lists the commits made in that repository in reverse chronological order.  
+**$ git log**  
+> commit ca82a6dff817ec66f44342007202690a93763949  
+Author: Scott Chacon <schacon@gee-mail.com>  
+Date: Mon Mar 17 21:52:11 2008 -0700  
+changed the version number  
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7  
+Author: Scott Chacon <schacon@gee-mail.com>  
+Date: Sat Mar 15 16:40:33 2008 -0700  
+removed unnecessary test  
+
+One of the more helpful options is **-p or --patch**, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using **-2** to show only the last two entries.  
+**$ git log -p -2**  
+If you want to see some abbreviated stats for each commit, you can use the **--stat** option:  
+**$ git log --stat**  
+Another really useful option is **--pretty**. This option changes the log output to **formats** other than the default.  
+**$ git log --pretty=oneline**  or  
+**$ git log --pretty=format:"%h - %an, %ar : %s"**  
+
+
+
 
 
 
