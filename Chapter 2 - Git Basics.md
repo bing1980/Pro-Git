@@ -150,13 +150,25 @@ Alternatively, you can type your commit message inline with the commit command b
 
 ### Skipping the Staging Area
 Adding the **-a** option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part:  
-**$ git commit -a -m 'added new benchmarks'**  
+**$ git commit -a -m "added new benchmarks"**  
 > [master 83e38c7] added new benchmarks  
 > 1 file changed, 5 insertions(+), 0 deletions(-)  
 
 Notice how you don’t have to run git add on the CONTRIBUTING.md file in this case before you commit.  
-That’s because the -a flag includes all changed files.
+That’s because the **-a flag includes all changed files**.
 ### Removing Files
+To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The **git rm command** does that, and also removes the file from your working directory so you don’t see it as an untracked file the next time around.  
+**$ git rm PROJECTS.md**  
+> rm 'PROJECTS.md'  
+**$ git status**  
+> On branch master  
+Your branch is up-to-date with 'origin/master'.  
+Changes to be committed:  
+(use "git reset HEAD <file>..." to unstage)  
+deleted: PROJECTS.md  
+ 
+You may want to keep the file on your hard drive but not have Git track it anymore:
+
 
 
 
