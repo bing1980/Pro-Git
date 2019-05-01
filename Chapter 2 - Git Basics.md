@@ -177,11 +177,11 @@ If you want to rename a file in Git, you can run something like:
 for example:  
 **$ git mv README.md README  
 $ git status**  
-> On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-(use "git reset HEAD <file>..." to unstage)
-renamed: README.md -> README
+> On branch master  
+Your branch is up-to-date with 'origin/master'.  
+Changes to be committed:  
+(use "git reset HEAD <file>..." to unstage)  
+renamed: README.md -> README  
  
 ## Viewing the Commit History
 
