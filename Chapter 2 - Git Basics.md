@@ -129,9 +129,9 @@ If you want to see what you’ve staged that will go into your next commit, you 
 
 and **git diff --cached** to see what **you’ve staged so far** (--staged and --cached are synonyms).
 ### Committing Your Changes
-Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run **git add** on since you edited them — **won’t go into this commit**.
+Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run **git add** on since you edited them — **won’t go into this commit**.  
 **$ git commit**  
-(shows in editor)  
+(shows in editor)    
 > Please enter the commit message for your changes. Lines starting  
 > with '#' will be ignored, and an empty message aborts the commit.  
 > On branch master  
@@ -140,6 +140,7 @@ Now that your staging area is set up the way you want it, you can commit your ch
 > Changes to be committed:  
 > new file: README  
 > modified: CONTRIBUTING.md  
+
 you can pass the **-v** option to git commit. Doing so also puts the diff of your change in the editor.
 Alternatively, you can type your commit message inline with the commit command by specifying it after a **-m** flag, like this:  
 **$ git commit -m "Story 182: Fix benchmarks for speed"**  
