@@ -234,7 +234,7 @@ If you’ve cloned your repository, you should at least see **origin** — that 
 $ cd ticgit  
 $ git remote  
 origin**    
-You can also specify -v, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote:  
+You can also specify -v, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote:    
 **$ git remote -v**  
 > origin https://github.com/schacon/ticgit (fetch)  
 > origin https://github.com/schacon/ticgit (push)  
@@ -242,16 +242,16 @@ You can also specify -v, which shows you the URLs that Git has stored for the sh
 To add a new remote Git repository as a shortname you can reference easily, run **git remote add \<shortname> \<url>**:  
 **$ git remote add pb https://github.com/paulboone/ticgit  
 **$ git remote -v**    
-> origin https://github.com/schacon/ticgit (fetch)
-origin https://github.com/schacon/ticgit (push)
-pb https://github.com/paulboone/ticgit (fetch)
-pb https://github.com/paulboone/ticgit (push)
+> origin https://github.com/schacon/ticgit (fetch)  
+origin https://github.com/schacon/ticgit (push)  
+pb https://github.com/paulboone/ticgit (fetch)  
+pb https://github.com/paulboone/ticgit (push)  
 
 Now you can use the string **pb** on the command line in lieu of the whole URL. For example, if you want to fetch all the information that Paul has but that you don’t yet have in your repository, you can run **git fetch pb**:  
 **$ git fetch pb**  
 > remote: Counting objects: 43, done.  
-remote: Compressing objects: 100% (36/36), done.  
-remote: Total 43 (delta 10), reused 31 (delta 5)  
+remote: Compressing objects: 100% (36/36), done.   
+remote: Total 43 (delta 10), reused 31 (delta 5)   
 Unpacking objects: 100% (43/43), done.  
 From https://github.com/paulboone/ticgit  
 * [new branch] master -> pb/master  
