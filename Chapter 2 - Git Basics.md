@@ -148,6 +148,14 @@ Alternatively, you can type your commit message inline with the commit command b
 > 2 files changed, 2 insertions(+)  
 > create mode 100644 README  
 
+### Skipping the Staging Area
+Adding the **-a** option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part:  
+**$ git commit -a -m 'added new benchmarks'**  
+> [master 83e38c7] added new benchmarks  
+> 1 file changed, 5 insertions(+), 0 deletions(-)  
+Notice how you don’t have to run git add on the CONTRIBUTING.md file in this case before you commit.  
+That’s because the -a flag includes all changed files.
+
 
 
 
