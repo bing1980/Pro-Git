@@ -216,6 +216,11 @@ As an example, if you commit and then realize you forgot to stage the changes in
 $ git add forgotten_file  
 $ git commit --amend**  
 ### Unstaging a Staged File
+To unstage the CONTRIBUTING.md file:  
+**$ git reset HEAD CONTRIBUTING.md**  
+> Unstaged changes after reset:  
+> M CONTRIBUTING.md  
+### Unmodifying a Modified File
 
 
 
