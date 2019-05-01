@@ -141,7 +141,7 @@ Now that your staging area is set up the way you want it, you can commit your ch
 > new file: README  
 > modified: CONTRIBUTING.md  
 
-you can pass the **-v** option to git commit. Doing so also puts the diff of your change in the editor.
+you can pass the **-v** option to git commit. Doing so also puts the diff of your change in the editor.  
 Alternatively, you can type your commit message inline with the commit command by specifying it after a **-m** flag, like this:  
 **$ git commit -m "Story 182: Fix benchmarks for speed"**  
 > [master 463dc4f] Story 182: Fix benchmarks for speed  
