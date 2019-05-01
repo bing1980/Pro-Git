@@ -191,7 +191,7 @@ Author: Scott Chacon <schacon@gee-mail.com>
 Date: Mon Mar 17 21:52:11 2008 -0700  
 changed the version number  
 
-commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7  
+> commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7  
 Author: Scott Chacon <schacon@gee-mail.com>  
 Date: Sat Mar 15 16:40:33 2008 -0700  
 removed unnecessary test  
@@ -203,6 +203,7 @@ If you want to see some abbreviated stats for each commit, you can use the **--s
 Another really useful option is **--pretty**. This option changes the log output to **formats** other than the default.  
 **$ git log --pretty=oneline**  or  
 **$ git log --pretty=format:"%h - %an, %ar : %s"**  
+### Limiting Log Output
 
 
 
