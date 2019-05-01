@@ -229,7 +229,7 @@ To give up last changes of CONTRIBUTING.md:
 Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.  
 ### Showing Your Remotes
 To see which remote servers you have configured, you can run the **git remote** command.  
-If you’ve cloned your repository, you should at least see **origin** — that is the default name Git gives to the server you cloned from 
+If you’ve cloned your repository, you should at least see **origin** — that is the default name Git gives to the server you cloned from  
 **$ git clone https://github.com/schacon/ticgit  
 $ cd ticgit  
 $ git remote  
