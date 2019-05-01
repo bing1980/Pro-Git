@@ -159,7 +159,8 @@ That’s because the **-a flag includes all changed files**.
 ### Removing Files
 To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The **git rm command** does that, and also removes the file from your working directory so you don’t see it as an untracked file the next time around.  
 **$ git rm PROJECTS.md**  
-> rm 'PROJECTS.md'</br>
+> rm 'PROJECTS.md'  
+
 **$ git status**  
 > On branch master  
 Your branch is up-to-date with 'origin/master'.  
@@ -167,8 +168,10 @@ Changes to be committed:
 (use "git reset HEAD <file>..." to unstage)  
 deleted: PROJECTS.md  
  
-You may want to keep the file on your hard drive but not have Git track it anymore:
+You may want to keep the file on your hard drive but not have Git track it anymore:  
+**$ git rm --cached README**
 
+### Moving Files
 
 
 
