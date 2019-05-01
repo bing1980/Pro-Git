@@ -226,6 +226,8 @@ To give up last changes of CONTRIBUTING.md:
 **$ git checkout -- CONTRIBUTING.md**
 
 ## Working with Remotes
+Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.  
+### Showing Your Remotes
 
 
 
