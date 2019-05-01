@@ -204,7 +204,12 @@ Another really useful option is **--pretty**. This option changes the log output
 **$ git log --pretty=oneline**  or  
 **$ git log --pretty=format:"%h - %an, %ar : %s"**  
 ### Limiting Log Output
+The **time-limiting** options such as **--since** and **--until** are very useful. For example, this command gets the list of commits made in the last two weeks:  
+**$ git log --since=2.weeks**  
+Another really helpful filter is the **-S** option, which takes a string and shows only those commits that changed the number of occurrences of that string. For instance, if you wanted to find the last commit that added or removed a reference to a specific function, you could call:  
+**$ git log -S function_name**  
 
+## Undoing Things
 
 
 
