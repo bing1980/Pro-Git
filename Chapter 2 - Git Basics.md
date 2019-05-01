@@ -210,6 +210,13 @@ Another really helpful filter is the **-S** option, which takes a string and sho
 **$ git log -S function_name**  
 
 ## Undoing Things
+If you want to redo previous commit, make the additional changes you forgot, stage them, and commit again using the **--amend** option:  **$ git commit --amend**  
+As an example, if you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit, you can do something like this:  
+**$ git commit -m 'initial commit'  
+$ git add forgotten_file  
+$ git commit --amend**  
+### Unstaging a Staged File
+
 
 
 
