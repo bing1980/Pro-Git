@@ -107,4 +107,14 @@ The rules for the patterns you can put in the .gitignore file are as follows:
 
 ### Viewing Your Staged and Unstaged Changes
 If you want to know exactly what you changed, not just which files were changed — you can use the **git diff** command.  
-That command compares what is in your working directory with what is in your staging area. The result tells you **the changes you’ve made that you haven’t yet staged.**
+That command compares what is in your working directory with what is in your staging area. The result tells you **the changes you’ve made that you haven’t yet staged.**:
+> **$ git diff**  
+> diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md  
+> index 8ebb991..643e24f 100644  
+> --- a/CONTRIBUTING.md  
+> +++ b/CONTRIBUTING.md  
+> @@ -65,7 +65,8 @@ branch directly, things can get messy.  
+> Please include a nice description of your changes when you submit your PR;  
+> .....
+If you want to see what you’ve staged that will go into your next commit, you can use **git diff --staged**. This command compares your staged changes to your last commit:  
+
