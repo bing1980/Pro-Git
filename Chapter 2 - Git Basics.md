@@ -172,7 +172,18 @@ You may want to keep the file on your hard drive but not have Git track it anymo
 **$ git rm --cached README**
 
 ### Moving Files
-
+If you want to rename a file in Git, you can run something like:  
+**$ git mv file_from file_to**  
+for example:  
+**$ git mv README.md README  
+$ git status**  
+> On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+(use "git reset HEAD <file>..." to unstage)
+renamed: README.md -> README
+ 
+## Viewing the Commit History
 
 
 
