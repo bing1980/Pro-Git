@@ -115,6 +115,17 @@ That command compares what is in your working directory with what is in your sta
 > +++ b/CONTRIBUTING.md  
 > @@ -65,7 +65,8 @@ branch directly, things can get messy.  
 > Please include a nice description of your changes when you submit your PR;  
-> .....
+> ..... ......
+
 If you want to see what you’ve staged that will go into your next commit, you can use **git diff --staged**. This command compares your staged changes to your last commit:  
+> **$ git diff --staged**  
+> diff --git a/README b/README  
+> new file mode 100644  
+> index 0000000..03902a1  
+> --- /dev/null  
+> +++ b/README  
+> @@ -0,0 +1 @@  
+> +My Project  
+
+
 
