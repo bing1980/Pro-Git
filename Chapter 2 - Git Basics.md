@@ -127,5 +127,8 @@ If you want to see what you’ve staged that will go into your next commit, you 
 > @@ -0,0 +1 @@  
 > +My Project  
 
+and **git diff --cached** to see what **you’ve staged so far** (--staged and --cached are synonyms).
+### Committing Your Changes
+
 
 
