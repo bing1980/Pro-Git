@@ -106,5 +106,5 @@ The rules for the patterns you can put in the .gitignore file are as follows:
 * You can negate a pattern by starting it with an exclamation point (!).
 
 ### Viewing Your Staged and Unstaged Changes
-
-
+If you want to know exactly what you changed, not just which files were changed — you can use the **git diff** command.  
+That command compares what is in your working directory with what is in your staging area. The result tells you **the changes you’ve made that you haven’t yet staged.**
