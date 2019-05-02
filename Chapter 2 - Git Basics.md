@@ -359,7 +359,19 @@ To git@github.com:schacon/simplegit.git
 > * [new tag] v1.4 -> v1.4  
 > * [new tag] v1.4-lw -> v1.4-lw  
 
-
+### Deleting Tags
+To delete a tag on your local repository, you can use **git tag -d \<tagname>**.  
+**$ git tag -d v1.4-lw**  
+> Deleted tag 'v1.4-lw' (was e7d5add)  
+> Note that this does not remove the tag from any remote servers  
+Note that this does not remove the tag from any remote servers.   
+There are two common variations for deleting a tag from a remote server:   
+* The first variation is git push <remote> :refs/tags/<tagname>  
+> **$ git push origin :refs/tags/v1.4-lw**  
+> To /git@github.com:schacon/simplegit.git
+> - [deleted] v1.4-lw
+* The second (and more intuitive) way to delete a remote tag is with:  
+ **$ git push origin --delete <tagname>**
 
 
 
