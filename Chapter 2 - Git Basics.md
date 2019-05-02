@@ -349,6 +349,16 @@ updated rakefile
 ...  
 
 ### Sharing Tags
+By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run **git push origin \<tagname>**.  
+If you have a lot of tags that you want to push up at once, you can also use the **--tags** option to the git push command.  
+**$ git push origin --tags**  
+> Counting objects: 1, done.  
+Writing objects: 100% (1/1), 160 bytes | 0 bytes/s, done.  
+Total 1 (delta 0), reused 0 (delta 0)  
+To git@github.com:schacon/simplegit.git  
+> * [new tag] v1.4 -> v1.4  
+> * [new tag] v1.4-lw -> v1.4-lw  
+
 
 
 
