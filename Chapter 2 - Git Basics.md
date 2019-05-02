@@ -315,9 +315,9 @@ Annotated tags, however, are stored as full objects in the Git database.
 Creating an annotated tag in Git is simple. The easiest way is to specify **-a** when you run the tag command:  
 **$ git tag -a v1.4 -m "my version 1.4"**  
 **$ git tag**  
-> v0.1
-> v1.3
-> v1.4  
+  > v0.1
+  > v1.3
+  > v1.4  
 The -m specifies a tagging message, which is stored with the tag.  
 You can see the tag data along with the commit that was tagged by using the **git show** command  
 * **Lightweight Tags**  
