@@ -382,12 +382,17 @@ changes and commit them, and you can discard any commits you make in this
 state without impacting any branches by performing another checkou
 ... ...  
 
-if you need to make changes — say you’re fixing a bug on an older version, for instance — you will generally want to create a branch:  
+If you need to make changes — say you’re fixing a bug on an older version, for instance — you will generally want to create a branch:  
 **$ git checkout -b version2 v2.0.0**  
 > Switched to a new branch 'version2'
 
 If you do this and make a commit, your version2 branch will be slightly different than your v2.0.0 tag.  
 
 ## Git Aliases
+Git doesn’t automatically infer your command if you type it in partially. If you don’t want to type the entire text of each of the Git commands, you can easily set up an alias for each command using **git config**. Here are a couple of examples you may want to set up:  
+**$ git config --global alias.co checkout  
+$ git config --global alias.br branch  
+$ git config --global alias.ci commit  
+$ git config --global alias.st status**  
 
 
