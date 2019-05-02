@@ -366,13 +366,28 @@ To delete a tag on your local repository, you can use **git tag -d \<tagname>**.
 Note that this does not remove the tag from any remote servers.
 
 There are two common variations for deleting a tag from a remote server:   
-* The first variation is **git push \<remote> :refs/tags/\<tagname>**:    
+1. The first variation is **git push \<remote> :refs/tags/\<tagname>**:    
 > **$ git push origin :refs/tags/v1.4-lw**    
 > To /git@github.com:schacon/simplegit.git
 > - [deleted] v1.4-lw
-* The second (and more intuitive) way to delete a remote tag is with:  
+2. The second (and more intuitive) way to delete a remote tag is with:  
  **$ git push origin --delete \<tagname>**  
- ### Checking out Tags
 
+### Checking out Tags
+If you want to view the versions of files a tag is pointing to, you can do a git checkout of that tag:  
+**$ git checkout 2.0.0**  
+> Note: checking out '2.0.0'.
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkou
+... ...  
+
+if you need to make changes — say you’re fixing a bug on an older version, for instance — you will generally want to create a branch:  
+**$ git checkout -b version2 v2.0.0**  
+> Switched to a new branch 'version2'
+
+If you do this and make a commit, your version2 branch will be slightly different than your v2.0.0 tag.  
+
+## Git Aliases
 
 
