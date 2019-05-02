@@ -333,7 +333,8 @@ To create a lightweight tag, **don’t supply** any of the -a, -s, or -m options
 You can also tag commits after you’ve moved past them. Suppose your commit history looks like this:  
 **$ git log --pretty=oneline**  
 > 15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'  
-> **9fceb02**d0ae598e95dc970b74767f19372d61af8 **updated rakefile**  
+> **9fceb02**d0ae598e95dc970b74767f19372d61af8 **updated rakefile**
+
 Suppose you forgot to tag the project at v1.2, which was at the **“updated rakefile”** commit:  
 **$ git tag -a v1.2 9fceb02**  
 **$ git show v1.2**  
