@@ -324,10 +324,10 @@ You can see the tag data along with the commit that was tagged by using the **gi
 To create a lightweight tag, **don’t supply** any of the -a, -s, or -m options, just provide a tag name:  
 **$ git tag v1.4-lw**  
 **$ git tag**  
-> v0.1  
-v1.3  
-v1.4  
-v1.4-lw  
+  > v0.1  
+    v1.3  
+    v1.4  
+    v1.4-lw  
 
 ### Tagging Later
 
