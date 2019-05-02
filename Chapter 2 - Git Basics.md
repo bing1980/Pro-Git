@@ -300,6 +300,14 @@ If you want to remove a remote for some reason:
 > origin 
 
 ## Tagging
+Like most VCSs, Git has the ability to tag specific points in a repository’s history as being important.  
+Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).  
+### Listing Your Tags
+Listing the existing tags in Git is straightforward. Just type git tag (with optional -l or --list):  
+**$ git tag  
+v1.0  
+v2.0  **
+### Creating Tags
 
 
 
