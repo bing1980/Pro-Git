@@ -311,6 +311,25 @@ Listing the existing tags in Git is straightforward. Just type **git tag** (with
 Git supports two types of tags: lightweight and annotated.  
 A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.  
 Annotated tags, however, are stored as full objects in the Git database.  
-** * Annotated Tags
+* **Annotated Tags**
+Creating an annotated tag in Git is simple. The easiest way is to specify **-a** when you run the tag command:  
+**$ git tag -a v1.4 -m "my version 1.4"**  
+**$ git tag**  
+> v0.1
+> v1.3
+> v1.4  
+The -m specifies a tagging message, which is stored with the tag.  
+You can see the tag data along with the commit that was tagged by using the **git show** command  
+* **Lightweight Tags**  
+To create a lightweight tag, **don’t supply** any of the -a, -s, or -m options, just provide a tag name:  
+**$ git tag v1.4-lw**  
+**$ git tag**  
+> v0.1  
+v1.3  
+v1.4  
+v1.4-lw  
+
+### Tagging Later
+
 
 
