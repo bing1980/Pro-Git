@@ -287,7 +287,18 @@ Local ref configured for 'git push':
 master pushes to master (up to date)  
 
 ### Renaming and Removing Remotes
+You can run **git remote rename** to change a remote’s shortname:  
+**$ git remote rename pb paul**   
+> $ git remote  
+> origin
+> paul
 
+If you want to remove a remote for some reason:  
+**$ git remote remove paul**  
+> $ git remote
+origin 
+
+## Tagging
 
 
 
