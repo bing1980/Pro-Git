@@ -1,3 +1,4 @@
+# Git Basics  
 ## Getting a Git Repository
 You typically obtain a Git repository in one of two ways:  
 1. You can take a local directory that is currently not under version control, and turn it into a Git repository, or  
