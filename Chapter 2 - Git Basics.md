@@ -330,6 +330,25 @@ To create a lightweight tag, **don’t supply** any of the -a, -s, or -m options
     v1.4-lw  
 
 ### Tagging Later
+You can also tag commits after you’ve moved past them. Suppose your commit history looks like this:  
+**$ git log --pretty=oneline**  
+> 15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'  
+> **9fceb02**d0ae598e95dc970b74767f19372d61af8 **updated rakefile**  
+Suppose you forgot to tag the project at v1.2, which was at the **“updated rakefile”** commit:  
+**$ git tag -a v1.2 9fceb02**  
+**$ git show v1.2**  
+> tag v1.2  
+Tagger: Scott Chacon <schacon@gee-mail.com>  
+Date: Mon Feb 9 15:32:16 2009 -0800  
+version 1.2  
+commit 9fceb02d0ae598e95dc970b74767f19372d61af8  
+Author: Magnus Chacon <mchacon@gee-mail.com>  
+Date: Sun Apr 27 20:43:35 2008 -0700  
+updated rakefile  
+...  
+
+### Sharing Tags
+
 
 
 
