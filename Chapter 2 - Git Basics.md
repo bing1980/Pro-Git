@@ -259,6 +259,10 @@ From https://github.com/paulboone/ticgit
 > * [new branch] ticgit -> pb/ticgit  
 
 ### Fetching and Pulling from Your Remotes
+To get data from your remote projects, you can run:  
+**$ git fetch \<remote>**  
+The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the branches from that remote, which you can merge in or inspect at any time.  
+**git fetch origin** fetches any new work that has been pushed to that server since you **cloned (or last fetched from)** it.  
 
 
 
