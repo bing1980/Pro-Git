@@ -266,7 +266,27 @@ The command goes out to that remote project and pulls down all the data from tha
 Running **git pull** generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.  
 
 ### Pushing to Your Remotes
+When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple:  
+**git push \<remote> \<branch>.**  
+If you want to push your master branch to your origin server:  
+**$ git push origin master**  
 
+### Inspecting a Remote
+If you want to see more information about a particular remote, you can use the **git remote show \<remote>** command.  
+**$ git remote show origin**  
+> * remote origin  
+Fetch URL: https://github.com/schacon/ticgit  
+Push URL: https://github.com/schacon/ticgit  
+HEAD branch: master  
+Remote branches:  
+master tracked  
+dev-branch tracked  
+Local branch configured for 'git pull':  
+master merges with remote master  
+Local ref configured for 'git push':  
+master pushes to master (up to date)  
+
+### Renaming and Removing Remotes
 
 
 
