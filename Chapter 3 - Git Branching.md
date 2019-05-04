@@ -9,6 +9,18 @@ Your Git repository now contains five objects: three blobs (each representing th
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch1.PNG)  
 If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch2.PNG)  
-A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master. As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically.  
+A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is **master**. As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch3.PNG)  
 ### Creating a New Branch 
+**$ git branch testing**  
+This creates a new pointer to the same commit you’re currently on.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch4.PNG)  
+How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD**.  
+In this case, you’re still on master. The git branch command only created a new branch — it didn’t switch to that branch.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch5.PNG)  
+You can easily see this by running:  
+**$ git log --oneline --decorate**  
+> f30ab (HEAD -> master, testing) add feature #32 - ability to add new formats to the central interface  
+34ac2 Fixed bug #1328 - stack overflow under certain conditions  
+98ca9 The initial commit of my project  
+### Switching Branches
