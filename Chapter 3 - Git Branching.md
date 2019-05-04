@@ -9,4 +9,6 @@ Your Git repository now contains five objects: three blobs (each representing th
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch1.PNG)  
 If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch2.PNG)  
-
+A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master. As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch3.PNG)  
+### Creating a New Branch 
