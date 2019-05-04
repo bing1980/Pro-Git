@@ -47,10 +47,10 @@ If you run **git log --oneline --decorate --graph --all** it will print out the 
 | * 87ab2 (testing) made a change  
 |/  
 > * f30ab add feature #32 - ability to add new formats to the  
-* 34ac2 fixed bug #1328 - stack overflow under certain conditions  
-* 98ca9 initial commit of my project  
+> * 34ac2 fixed bug #1328 - stack overflow under certain conditions  
+> * 98ca9 initial commit of my project  
 
-Because a branch in Git is actually a simple file that contains the 40 character SHA-1 checksum of the commit it points to, branches are cheap to create and destroy. Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline).
+Because a branch in Git is actually a simple file that contains the **40 character SHA-1** checksum of the commit it points to, branches are cheap to create and destroy. Creating a new branch is as quick and simple as writing 41 bytes to a file **(40 characters and a newline)**.
 
 ## Basic Branching and Merging
 
