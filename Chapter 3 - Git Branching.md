@@ -6,4 +6,7 @@ To visualize this, let’s assume that you have a directory containing three fil
 **$ git add README test.rb LICENSE  
 $ git commit -m 'The initial commit of my project'**  
 Your Git repository now contains five objects: three blobs (each representing the contents of one of the three files), one tree that lists the contents of the directory and specifies which file names are stored as which blobs, and one commit with the pointer to that root tree and all the commit metadata.  
-![image]()
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch1.PNG)  
+If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it:
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/branch2.PNG)  
+
