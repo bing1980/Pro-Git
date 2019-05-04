@@ -38,7 +38,7 @@ This is interesting, because now your testing branch has moved forward, but your
 That command did two things. It moved the HEAD pointer back to point to the master branch, and it
 reverted the files in your working directory back to the snapshot that master points to. This also means the changes you make from this point forward will diverge from an older version of the project.  
 Let’s make a few changes and commit again:  
-**$ vim test.rb
+**$ vim test.rb  
 $ git commit -a -m 'made other changes'**  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/switch4.PNG)  
 If you run **git log --oneline --decorate --graph --all** it will print out the history of your commits, showing where your branch pointers are and how your history has diverged.  
@@ -46,7 +46,7 @@ If you run **git log --oneline --decorate --graph --all** it will print out the 
 > * c2b9e (HEAD, master) made other changes  
 | * 87ab2 (testing) made a change  
 |/  
-* f30ab add feature #32 - ability to add new formats to the  
+> * f30ab add feature #32 - ability to add new formats to the  
 * 34ac2 fixed bug #1328 - stack overflow under certain conditions  
 * 98ca9 initial commit of my project  
 
