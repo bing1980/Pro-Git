@@ -24,3 +24,7 @@ You can easily see this by running:
 34ac2 Fixed bug #1328 - stack overflow under certain conditions  
 98ca9 The initial commit of my project  
 ### Switching Branches
+To switch to an existing branch, you run the **git checkout** command. Let’s switch to the new testing branch:  
+**$ git checkout testing**  
+This moves HEAD to point to the testing branch.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/switch1.PNG)  
