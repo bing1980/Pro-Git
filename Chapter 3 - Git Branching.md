@@ -195,12 +195,15 @@ To see the last commit on each branch, you can run **git branch -v**:
 > \* master 7a98805 Merge branch 'iss53'  
 > testing 782fd34 add scott to the author list in the readmes  
 
-The useful --merged and --no-merged options can filter this list to branches that you have or have not yet merged into the branch you’re currently on.  
+The useful **--merged** and **--no-merged** options can filter this list to branches that you have or have not yet merged into the branch you’re currently on.  
 **$ git branch --merged**  
-> iss53
+> iss53  
 \* master  
 
+**$ git branch --no-merged**
+> testing
 
+### Branching Workflows
 
 
 
