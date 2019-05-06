@@ -125,6 +125,31 @@ Now that your work is merged in, you have no further need for the iss53 branch. 
 **$ git branch -d iss53**  
 
 ### Basic Merge Conflicts
+If your fix for issue #53 modified the same part of a file as the hotfix branch, you’ll get a merge conflict that looks something like this:  
+**$ git merge iss53**  
+> Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html  
+Automatic merge failed; fix conflicts and then commit the result.  
+
+Git hasn’t automatically created a new merge commit. It has paused the process while you resolve the conflict. If you want to see which files are unmerged at any point after a merge conflict, you can run git status:  
+**$ git status**  
+> On branch master  
+You have unmerged paths.  
+(fix conflicts and run "git commit")  
+Unmerged paths:  
+(use "git add <file>..." to mark resolution)  
+both modified: index.html  
+no changes added to commit (use "git add" and/or "git commit -a")  
+  
+Anything that has merge conflicts and hasn’t been resolved is listed as unmerged. Your file contains a section that looks something like this:  
+> <<<<<<< HEAD:index.html  
+\<div id="footer">contact : email.support@github.com</div>  
+=======  
+\<div id="footer">  
+please contact us at support@github.com  
+\</div>  
+>>>>>>> iss53:index.html  
+
 
 
 
