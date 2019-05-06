@@ -148,7 +148,14 @@ Anything that has merge conflicts and hasn’t been resolved is listed as unmerg
 \<div id="footer">  
 please contact us at support@github.com  
 \</div>  
->>>>>>> iss53:index.html  
+\>>>>>>> iss53:index.html  
+
+In order to resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:  
+**\<div id="footer">  
+please contact us at email.support@github.com  
+\</div>**  
+After you’ve resolved each of these sections in each conflicted file, run **git add** on each file to mark it as resolved. Staging the file marks it as resolved in Git.  
+
 
 
 
