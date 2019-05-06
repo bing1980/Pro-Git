@@ -157,6 +157,47 @@ please contact us at email.support@github.com
 After you’ve resolved each of these sections in each conflicted file, run **git add** on each file to mark it as resolved. Staging the file marks it as resolved in Git.  
 
 
+If you want to use a graphical tool to resolve these issues, you can run **git mergetool**, which fires up an appropriate visual merge tool and walks you through the conflicts:  
+**$ git mergetool**  
+> This message is displayed because 'merge.tool' is not configured.  
+See 'git mergetool --tool-help' or 'git help config' for more details.  
+'git mergetool' will now attempt to use one of the following tools:  
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge  
+p4merge araxis bc3 codecompare vimdiff emerge  
+Merging:  
+index.html  
+Normal merge conflict for 'index.html':  
+{local}: modified file  
+{remote}: modified file  
+Hit return to start merge resolution tool (opendiff):  
+
+After you exit the merge tool, Git asks you if the merge was successful. If you tell the script that it was, it stages the file to mark it as resolved for you. You can run git status again to verify that all conflicts have been resolved:  
+**$ git status**  
+> On branch master  
+All conflicts fixed but you are still merging.  
+(use "git commit" to conclude merge)  
+Changes to be committed:  
+modified: index.html  
+
+If you’re happy with that, and you verify that everything that had conflicts has been staged, you can type **git commit** to finalize the merge commit:  
+**Merge branch 'iss53'**  
+
+> Conflicts:  
+index.html   
+> #  
+> # It looks like you may be committing a merge.  
+> # If this is not correct, please remove the file  
+> # .git/MERGE_HEAD  
+> # and try again.  
+> # Please enter the commit message for your changes. Lines starting  
+> # with '#' will be ignored, and an empty message aborts the commit.  
+> # On branch master  
+> # All conflicts fixed but you are still merging.  
+> #  
+> # Changes to be committed:  
+> # modified: index.html  
+> #  
+
 
 
 
