@@ -91,6 +91,21 @@ index.html | 2 ++
 
 Your change is now in the snapshot of the commit pointed to by the master branch, and you can deploy the fix. 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching5.PNG)  
+After your super-important fix is deployed, you’re ready to switch back to the work you were doing before you were interrupted. However, first you’ll delete the hotfix branch, because you no longer need it — the master branch points at the same place. You can delete it with the **-d** option to git branch:  
+**$ git branch -d hotfix**  
+> Deleted branch hotfix (3a0874c).
+
+Now you can switch back to your work-in-progress branch on issue #53 and continue working on it:  
+**$ git checkout iss53**  
+> Switched to branch "iss53"  
+
+**$ vim index.html  
+$ git commit -a -m 'finished the new footer [issue 53]'**  
+> [iss53 ad82d7a] finished the new footer [issue 53]
+1 file changed, 1 insertion(+)
+
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching6.PNG)  
 
 
 
