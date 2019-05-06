@@ -57,6 +57,31 @@ Because a branch in Git is actually a simple file that contains the **40 charact
 ### Basic Branching  
 First, let’s say you’re working on your project and have a couple of commits already on the master branch:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching1.PNG)  
+You’ve decided that you’re going to work on issue #53.  
+To create a new branch and switch to it at the same time, you can run the **git checkout** command with the **-b** switch:  
+**$ git checkout -b iss53**  
+> Switched to a new branch "iss53"  
+You work on your website and do some commits. Doing so moves the iss53 branch forward, because you have it checked out (that is, your HEAD is pointing to it):  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching3.PNG)  
+For now, let’s assume you’ve committed all your changes, so you can switch back to your master branch:  
+**$ git checkout master**  
+> Switched to branch 'master' 
+
+Next, you have a hotfix to make. Let’s create a hotfix branch on which to work until it’s completed:  
+**$ git checkout -b hotfix**  
+> Switched to a new branch 'hotfix'
+
+**$ vim index.html**  
+**$ git commit -a -m 'fixed the broken email address'**  
+> [hotfix 1fb7853] fixed the broken email address
+> 1 file changed, 2 insertions(+)  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching4.PNG)  
+
+
+
+
+
 
 
 
