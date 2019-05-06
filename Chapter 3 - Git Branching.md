@@ -182,6 +182,18 @@ modified: index.html
 If you’re happy with that, and you verify that everything that had conflicts has been staged, you can type **git commit** to finalize the merge commit.  
 
 ## Branch Management
+The **git branch** command does more than just create and delete branches. If you run it with no arguments, you get a simple listing of your current branches:  
+**$ git branch**  
+> iss53  
+> * master  
+> testing  
+
+Notice the * character indicates the branch that you currently have checked out.
+To see the last commit on each branch, you can run **git branch -v**:  
+**$ git branch -v**  
+> iss53 93b412c fix javascript issue  
+> * master 7a98805 Merge branch 'iss53'  
+> testing 782fd34 add scott to the author list in the readmes  
 
 
 
