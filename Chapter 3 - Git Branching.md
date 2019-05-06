@@ -61,7 +61,11 @@ You’ve decided that you’re going to work on issue #53.
 To create a new branch and switch to it at the same time, you can run the **git checkout** command with the **-b** switch:  
 **$ git checkout -b iss53**  
 > Switched to a new branch "iss53"  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching2.PNG)  
 You work on your website and do some commits. Doing so moves the iss53 branch forward, because you have it checked out (that is, your HEAD is pointing to it):  
+**$ vim index.html**  
+**$ git commit -a -m 'added a new footer [issue 53]'**  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching3.PNG)  
 For now, let’s assume you’ve committed all your changes, so you can switch back to your master branch:  
 **$ git checkout master**  
