@@ -81,6 +81,17 @@ Next, you have a hotfix to make. Let’s create a hotfix branch on which to work
 > 1 file changed, 2 insertions(+)  
 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching4.PNG)  
+You can run your tests, make sure the hotfix is what you want, and finally merge the hotfix branch back into your master branch to deploy to production. You do this with the **git merge** command:  
+**$ git checkout master**  
+**$ git merge hotfix**  
+> Updating f42c576..3a0874c  
+Fast-forward  
+index.html | 2 ++  
+1 file changed, 2 insertions(+)  
+
+Your change is now in the snapshot of the commit pointed to by the master branch, and you can deploy the fix. 
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching5.PNG)  
+
 
 
 
