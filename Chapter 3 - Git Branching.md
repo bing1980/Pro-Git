@@ -26,6 +26,7 @@ You can easily see this by running:
 ### Switching Branches
 To switch to an existing branch, you run the **git checkout** command. Let’s switch to the new testing branch:  
 **$ git checkout testing**  
+
 This moves HEAD to point to the testing branch.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/switch1.PNG)  
 Well, let’s do another commit:  
@@ -53,6 +54,9 @@ If you run **git log --oneline --decorate --graph --all** it will print out the 
 Because a branch in Git is actually a simple file that contains the **40 character SHA-1** checksum of the commit it points to, branches are cheap to create and destroy. Creating a new branch is as quick and simple as writing 41 bytes to a file **(40 characters and a newline)**.
 
 ## Basic Branching and Merging
+### Basic Branching  
+First, let’s say you’re working on your project and have a couple of commits already on the master branch:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/basic_branching1.PNG)  
 
 
 
