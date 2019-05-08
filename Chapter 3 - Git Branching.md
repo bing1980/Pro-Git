@@ -208,6 +208,17 @@ The useful **--merged** and **--no-merged** options can filter this list to bran
 Many Git developers have a workflow which having only code that is entirely **stable** in their **master branch** — possibly only code that has been or will be released. They have another **parallel branch** named develop or next that they work from or use to test stability — it isn’t necessarily always stable, but **whenever it gets to a stable state, it can be merged into master**.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/workflow1.PNG)
 ### Topic Branches
+Consider an example of doing some work (on **master**), branching off for an issue (**iss91**), working on it for a bit, branching off the second branch to try another way of handling the same thing (**iss91v2**), going back to your master branch and working there for a while, and then branching off there to do some work that you’re not sure is a good idea (**dumbidea** branch). Your commit history will look something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/workflow2.PNG)  
+
+Now, let’s say you decide you like the second solution to your issue best (**iss91v2**); and you showed the **dumbidea** branch to your coworkers, and it turns out to be genius. You can throw away the original iss91 branch (**losing commits C5 and C6**) and merge in the other two. Your history then looks like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/workflow3.PNG)  
+It’s important to remember when you’re doing all this that these branches are completely local.  
+
+### Remote Branches
+
+
+
 
 
 
