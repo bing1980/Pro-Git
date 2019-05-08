@@ -205,6 +205,9 @@ The useful **--merged** and **--no-merged** options can filter this list to bran
 
 ## Branching Workflows  
 ### Long-Running Branches
+Many Git developers have a workflow which having only code that is entirely **stable** in their **master branch** — possibly only code that has been or will be released. They have another **parallel branch** named develop or next that they work from or use to test stability — it isn’t necessarily always stable, but **whenever it gets to a stable state, it can be merged into master**.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/workflow1.PNG)
+### Topic Branches
 
 
 
