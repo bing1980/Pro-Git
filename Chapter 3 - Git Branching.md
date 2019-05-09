@@ -230,6 +230,17 @@ Let’s assume you have another internal Git server that is used only for develo
 Now, you can run **git fetch teamone** to fetch everything the remote teamone server has that you don’t have yet. Because that server has a subset of the data your origin server has right now, Git fetches no data but **sets a remote-tracking branch** called **teamone/master** to point to the commit that teamone has as its master branch.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch5.PNG)  
 ### Pushing  
+When you want to share a branch with the world, you need to push it up to a remote to which you have write access.  
+If you have a branch named **serverfix** that you want to work on with others, you can push it up the same way you pushed your first branch. Run **git push \<remote> \<branch>**:  
+**$ git push origin serverfix**  
+> Counting objects: 24, done.  
+Delta compression using up to 8 threads.  
+Compressing objects: 100% (15/15), done.  
+Writing objects: 100% (24/24), 1.91 KiB | 0 bytes/s, done.  
+Total 24 (delta 2), reused 0 (delta 0)  
+To https://github.com/schacon/simplegit  
+\* [new branch] serverfix -> serverfix  
+
 
 
 
