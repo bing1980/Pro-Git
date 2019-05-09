@@ -283,7 +283,10 @@ master 1ae2a45 [origin/master] deploying index fix
 \* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it  
 testing 5ea463a trying something new  
 
-So here we can see that our iss53 branch is tracking origin/iss53 and is “ahead” by two, meaning that we have two commits locally that are not pushed to the server. We can also see that our master branch is tracking origin/master and is up to date. Next we can see that our serverfix branch is tracking the server-fix-good branch on our teamone server and is ahead by three and behind by one, meaning that there is one commit on the server we haven’t merged in yet and three commits locally that we haven’t pushed. Finally we can see that our testing branch is not tracking any remote branch.
+So here we can see that our iss53 branch is tracking **origin/iss53** and is **“ahead”** by two, meaning that we have two commits locally that are not pushed to the server. We can also see that our master branch is tracking **origin/master** and is up to date. Next we can see that our serverfix branch is tracking the server-fix-good branch on our teamone server and is **ahead by three and behind by one**, meaning that there is one commit on the server we haven’t merged in yet and three commits locally that we haven’t pushed. Finally we can see that our testing branch is not tracking any remote branch.  
+If you want totally up to date ahead and behind numbers, you’ll need to fetch from all your remotes right before running this. You could do that like this:  
+**$ git fetch --all; git branch -vv**  
+### Pulling
 
 
 
