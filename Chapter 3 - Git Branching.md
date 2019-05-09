@@ -296,8 +296,8 @@ Git pull will look up what server and branch your current branch is tracking, fe
 Suppose you’re done with a remote branch, you can delete a remote branch using the **--delete** option to **git push**. If you want to
 delete your **serverfix** branch from the server, you run the following:  
 **$ git push origin --delete serverfix**  
-> To https://github.com/schacon/simplegit
-\- [deleted]                 serverfix  
+> To https://github.com/schacon/simplegit  
+\- [deleted]      &nbsp&nbsp&nbsp           serverfix  
 
 ## Rebasing
 
