@@ -220,7 +220,14 @@ You can get a full list of remote references explicitly with git **ls-remote [re
 Remote-tracking branches are references to the state of remote branches. They’re local references that you can’t move; Git moves them for you whenever you do any network communication, to make sure they accurately represent the state of the remote repository.  
 
 Let’s say you have a Git server on your network at ***git.ourcompany.com***. If you **clone** from this, Git’s clone command automatically names it origin for you, pulls down all its data, creates a pointer to where its master branch is, and names it **origin/master** locally. Git also gives you your own **local master** branch starting at the same place as origin’s master branch, so you have something to work from.  
-![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch1.PNG)
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch1.PNG)  
+If you do some work on your local master branch, and, in the meantime, someone else pushes to *git.ourcompany.com* and updates its master branch, then your histories move forward differently. Also, as long as you stay out of contact with your origin server, your **origin/master** pointer doesn’t move.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch2.PNG)  
+To synchronize your work with a given remote, you run a **git fetch \<remote>** command (in our case, **git fetch origin**). This command looks up which server “origin” is (in this case, it’s git.ourcompany.com), fetches any data from it that you don’t yet have, and **updates your local database**, moving your **origin/master** pointer to its new, more up-to-date position.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch3.PNG)  
+
+
+
 
 
 
