@@ -251,6 +251,7 @@ remote: Total 3 (delta 0), reused 3 (delta 0)
 Unpacking objects: 100% (3/3), done.  
 From https://github.com/schacon/simplegit  
 \* [new branch] serverfix -> origin/serverfix  
+
 In this case, you don’t have a new serverfix branch — you have only an origin/serverfix pointer that you can’t modify.  
 To merge this work into your current working branch, you can run **git merge origin/serverfix**. If you want your own serverfix branch that you can work on, you can base it off your remotetracking branch:  
 **$ git checkout -b serverfix origin/serverfix**  
