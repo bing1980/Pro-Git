@@ -216,6 +216,11 @@ Now, let’s say you decide you like the second solution to your issue best (**i
 It’s important to remember when you’re doing all this that these branches are completely local.  
 
 ### Remote Branches
+You can get a full list of remote references explicitly with git **ls-remote [remote]**, or **git remote show [remote]** for remote branches as well as more information. Nevertheless, a more common way is to take advantage of **remote-tracking** branches.  
+Remote-tracking branches are references to the state of remote branches. They’re local references that you can’t move; Git moves them for you whenever you do any network communication, to make sure they accurately represent the state of the remote repository.  
+
+Let’s say you have a Git server on your network at ***git.ourcompany.com***. If you **clone** from this, Git’s clone command automatically names it origin for you, pulls down all its data, creates a pointer to where its master branch is, and names it **origin/master** locally. Git also gives you your own **local master** branch starting at the same place as origin’s master branch, so you have something to work from.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch1.PNG)
 
 
 
