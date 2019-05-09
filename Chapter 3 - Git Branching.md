@@ -241,6 +241,23 @@ Total 24 (delta 2), reused 0 (delta 0)
 To https://github.com/schacon/simplegit  
 \* [new branch] serverfix -> serverfix  
 
+Git automatically expands the serverfix branchname out to **refs/heads/serverfix:refs/heads/serverfix**, which means, “Take my serverfix local branch and push it to update the remote’s serverfix branch.” You can also do git push origin serverfix:serverfix, which does the same thing. If you didn’t want it to be called serverfix on the remote, you could instead run **git push origin serverfix:awesomebranch** to push your local serverfix branch to the awesomebranch branch on the remote project.  
+
+The next time one of your collaborators fetches from the server, they will get a reference to where the server’s version of serverfix is under the remote branch origin/serverfix:  
+**$ git fetch origin**  
+> remote: Counting objects: 7, done.  
+remote: Compressing objects: 100% (2/2), done.  
+remote: Total 3 (delta 0), reused 3 (delta 0)  
+Unpacking objects: 100% (3/3), done.  
+From https://github.com/schacon/simplegit  
+\* [new branch] serverfix -> origin/serverfix  
+In this case, you don’t have a new serverfix branch — you have only an origin/serverfix pointer that you can’t modify.  
+To merge this work into your current working branch, you can run **git merge origin/serverfix**. If you want your own serverfix branch that you can work on, you can base it off your remotetracking branch:  
+**$ git checkout -b serverfix origin/serverfix**  
+> Branch serverfix set up to track remote branch serverfix from origin.  
+Switched to a new branch 'serverfix'  
+
+### Tracking Branches
 
 
 
