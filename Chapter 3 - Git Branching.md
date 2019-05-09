@@ -297,7 +297,7 @@ Suppose you’re done with a remote branch, you can delete a remote branch using
 delete your **serverfix** branch from the server, you run the following:  
 **$ git push origin --delete serverfix**  
 > To https://github.com/schacon/simplegit  
-\- [deleted]      &nbsp&nbsp&nbsp           serverfix  
+\- [deleted] <space> serverfix  
 
 ## Rebasing
 
