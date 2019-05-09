@@ -259,7 +259,31 @@ To merge this work into your current working branch, you can run **git merge ori
 Switched to a new branch 'serverfix'  
 
 ### Tracking Branches
+Checking out a local branch from a remote-tracking branch automatically creates what is called a “tracking branch”.Tracking branches are
+local branches that have a direct relationship to a remote branch.    
+When you **clone** a repository, it generally automatically creates a master branch that tracks **origin/master**.  
+The simple case is the example you just saw, running **git checkout -b \<branch> \<remote>/\<branch>**. This is a common enough operation that Git provides the --track shorthand:  
+**$ git checkout --track origin/serverfix**  
+> Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
 
+To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:  
+**$ git checkout -b sf origin/serverfix**  
+> Branch sf set up to track remote branch serverfix from origin.
+Switched to a new branch 'sf'
+
+If you already have a local branch and want to set it to a remote branch you just pulled down, or want to change the upstream branch you’re tracking:  
+**$ git branch -u origin/serverfix**  
+> Branch serverfix set up to track remote branch serverfix from origin.
+
+If you want to see what tracking branches you have set up, you can use the **-vv** option to git branch.  
+**$ git branch -vv**  
+> iss53 7e424c3 [origin/iss53: ahead 2] forgot the brackets  
+master 1ae2a45 [origin/master] deploying index fix  
+\* serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it  
+testing 5ea463a trying something new  
+
+So here we can see that our iss53 branch is tracking origin/iss53 and is “ahead” by two, meaning that we have two commits locally that are not pushed to the server. We can also see that our master branch is tracking origin/master and is up to date. Next we can see that our serverfix branch is tracking the server-fix-good branch on our teamone server and is ahead by three and behind by one, meaning that there is one commit on the server we haven’t merged in yet and three commits locally that we haven’t pushed. Finally we can see that our testing branch is not tracking any remote branch.
 
 
 
