@@ -225,6 +225,10 @@ If you do some work on your local master branch, and, in the meantime, someone e
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch2.PNG)  
 To synchronize your work with a given remote, you run a **git fetch \<remote>** command (in our case, **git fetch origin**). This command looks up which server “origin” is (in this case, it’s git.ourcompany.com), fetches any data from it that you don’t yet have, and **updates your local database**, moving your **origin/master** pointer to its new, more up-to-date position.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch3.PNG)  
+Let’s assume you have another internal Git server that is used only for development by one of your sprint teams. This server is at *git.team1.ourcompany.com*. You can add it as a **new remote reference** to the project you’re currently working on by running the **git remote add** command as we covered in Git Basics. Name this remote **teamone**, which will be your shortname for that whole URL.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch4.PNG)  
+
+
 
 
 
