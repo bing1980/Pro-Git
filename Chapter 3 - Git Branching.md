@@ -215,7 +215,7 @@ Now, let’s say you decide you like the second solution to your issue best (**i
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/workflow3.PNG)  
 It’s important to remember when you’re doing all this that these branches are completely local.  
 
-### Remote Branches
+## Remote Branches
 You can get a full list of remote references explicitly with git **ls-remote [remote]**, or **git remote show [remote]** for remote branches as well as more information. Nevertheless, a more common way is to take advantage of **remote-tracking** branches.  
 Remote-tracking branches are references to the state of remote branches. They’re local references that you can’t move; Git moves them for you whenever you do any network communication, to make sure they accurately represent the state of the remote repository.  
 
@@ -227,6 +227,10 @@ To synchronize your work with a given remote, you run a **git fetch \<remote>** 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch3.PNG)  
 Let’s assume you have another internal Git server that is used only for development by one of your sprint teams. This server is at *git.team1.ourcompany.com*. You can add it as a **new remote reference** to the project you’re currently working on by running the **git remote add** command as we covered in Git Basics. Name this remote **teamone**, which will be your shortname for that whole URL.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch4.PNG)  
+Now, you can run **git fetch teamone** to fetch everything the remote teamone server has that you don’t have yet. Because that server has a subset of the data your origin server has right now, Git fetches no data but **sets a remote-tracking branch** called **teamone/master** to point to the commit that teamone has as its master branch.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/remote_branch5.PNG)  
+### Pushing  
+
 
 
 
