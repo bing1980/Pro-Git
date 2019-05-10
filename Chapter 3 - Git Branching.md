@@ -300,6 +300,8 @@ delete your **serverfix** branch from the server, you run the following:
 \- [deleted] &nbsp;&nbsp;&nbsp; serverfix  
 
 ## Rebasing
+In Git, there are two main ways to integrate changes from one branch into another: the **merge** and the **rebase**. In this section you’ll learn what rebasing is, how to do it, why it’s a pretty amazing tool, and in what cases you won’t want to use it.  
+### The Basic Rebase
 
 
 
