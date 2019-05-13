@@ -354,6 +354,18 @@ Now you’re both in a pickle. If you do a git pull, you’ll create a merge com
 If you run a git log when your history looks like this, you’ll see two commits that have the same author, date, and message, which will be confusing.  
 
 ### Rebase When You Rebase
+If you pull down work that was rewritten and rebase it on top of the new commits from your partner, Git can often successfully figure out what is uniquely yours and apply them back on top of the new branch.  
+For instance, in the previous scenario, if instead of doing a merge when we’re at Someone pushes rebased commits, abandoning commits you’ve based your work on we run **git rebase teamone/master**, Git will:    
+* Determine what work is unique to our branch (C2, C3, C4, C6, C7)  
+* Determine which are not merge commits (C2, C3, C4)  
+* Determine which have not been rewritten into the target branch (just C2 and C3, since C4 is the same patch as C4')  
+* Apply those commits to the top of teamone/master  
+So instead of the result we see in You merge in the same work again into a new merge commit, we would end up with something more like **Rebase on top of force-pushed rebase work**..  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase12.PNG)  
+
+### Rebase vs. Merge  
+In general the way to get the best of both worlds is to **rebase local changes** you’ve made but haven’t shared yet before you push them in order to clean up your story, but **never rebase anything you’ve pushed somewhere**.  
+
 
 
 
