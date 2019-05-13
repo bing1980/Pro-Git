@@ -319,7 +319,31 @@ At this point, you can go back to the master branch and do a fast-forward merge.
 Now, the snapshot pointed to by **C4'** is exactly the same as the one that was pointed to by **C5** in the merge example.  
 
 Often, you’ll do this to make sure your commits apply cleanly on a remote branch — perhaps in a project to which you’re trying to contribute but that you don’t maintain. In this case, you’d do your work in a branch and then rebase your work onto origin/master when you were ready to submit your patches to the main project. That way, the maintainer doesn’t have to do any integration work — just a fast-forward or a clean apply.  
-### More Interesting Rebases
+### More Interesting Rebases  
+For example. You branched a topic branch (server) to add some server-side functionality to your project, and made a commit.  
+Then, you branched off that to make the client-side changes (client) and committed a few times.  
+Finally, you went back to your server branch and did a few more commits.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase4.PNG)  
+Suppose you decide that you want to merge your client-side changes into your mainline for a release, but you want to hold off on the server-side changes until it’s tested further. You can take the changes on client that aren’t on server (C8 and C9) and replay them on your master branch by using the --onto option of git rebase:  
+**$ git rebase --onto master server client**  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase5.PNG)  
+Now you can fast-forward your master branch:  
+**$ git checkout master  
+$ git merge client**  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase6.PNG)  
+Let’s say you decide to pull in your server branch as well:  
+**$ git rebase master server**  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase7.PNG)  
+Then, you can fast-forward the base branch (master):  
+**$ git checkout master  
+$ git merge server**  
+You can remove the client and server branches because all the work is integrated and you don’t need them anymore:  
+**$ git branch -d client  
+$ git branch -d server**  
+
+### The Perils of Rebasing
+
+
 
 
 
