@@ -342,6 +342,20 @@ You can remove the client and server branches because all the work is integrated
 $ git branch -d server**  
 
 ### The Perils of Rebasing
+**Do not rebase commits that exist outside your repository and people may have based work on them.**  
+Suppose you clone from a central server and then do some work off that. Your commit history looks like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase8.PNG)  
+Now, someone else does more work that includes a merge, and pushes that work to the central server. You fetch it and merge the new remote branch into your work, making your history look something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase9.PNG)  
+Next, the person who pushed the merged work decides to go back and rebase their work instead; they do a git push --force to overwrite the history on the server. You then fetch from that server, bringing down the new commits.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase10.PNG)    
+Now you’re both in a pickle. If you do a git pull, you’ll create a merge commit which includes both lines of history, and your repository will look like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase11.PNG)  
+If you run a git log when your history looks like this, you’ll see two commits that have the same author, date, and message, which will be confusing.  
+
+### Rebase When You Rebase
+
+
 
 
 
