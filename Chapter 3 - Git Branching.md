@@ -302,6 +302,21 @@ delete your **serverfix** branch from the server, you run the following:
 ## Rebasing
 In Git, there are two main ways to integrate changes from one branch into another: the **merge** and the **rebase**.  
 ### The Basic Rebase
+Compare to basic merge diagram as bellow:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase1.PNG)  
+However, there is another way: you can take the patch of the change that was introduced in C4 and reapply it on top of C3. In Git, this is called **rebasing**. With the rebase command, you can take all the changes that were committed on one branch and replay them on a different branch.  
+For this example, you would check out the experiment branch, and then rebase it onto the master branch as follows:  
+**$ git checkout experiment**  
+**$ git rebase master**  
+> First, rewinding head to replay your work on top of it...  
+Applying: added staged command  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase2.PNG)  
+At this point, you can go back to the master branch and do a fast-forward merge.  
+**$ git checkout master**  
+**$ git merge experiment**  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/rebase3.PNG)  
+
 
 
 
