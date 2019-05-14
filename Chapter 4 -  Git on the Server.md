@@ -13,4 +13,5 @@ or：
 To add a local repository to an existing Git project, you can run something like this:  
 **$ git remote add local_proj /srv/git/project.git**  
 ### The HTTP Protocols  
-
+Git can communicate over HTTP using two different modes: the **Smart HTTP** protocol and the older way as **Dumb HTTP**.  
+#### Smart HTTP
