@@ -30,4 +30,9 @@ $ chmod a+x hooks/post-update**
 The post-update hook that comes with Git by default runs the appropriate command (git update-server-info) to make HTTP fetching and cloning work properly. This command is run when you push to this repository (over SSH perhaps); then, other people can clone via something like:  
 **$ git clone https://example.com/gitproject.git**  
 ### The SSH Protocol
-
+A common transport protocol for Git when self-hosting is over SSH. This is because SSH access to servers is already set up in most places — and if it isn’t, it’s easy to do. SSH is also an authenticated network protocol and, because it’s ubiquitous, it’s generally easy to set up and use.  
+To clone a Git repository over SSH, you can specify an ssh:// URL like this:  
+**$ git clone ssh://[user@]server/project.git**  
+Or you can use the shorter scp-like syntax for the SSH protocol:  
+**$ git clone [user@]server:project.git**  
+### The Git Protocol
