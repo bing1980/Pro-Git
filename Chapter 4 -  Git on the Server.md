@@ -15,3 +15,18 @@ To add a local repository to an existing Git project, you can run something like
 ### The HTTP Protocols  
 Git can communicate over HTTP using two different modes: the **Smart HTTP** protocol and the older way as **Dumb HTTP**.  
 #### Smart HTTP
+It has probably become the most popular way to use Git now, since it can be set up to both serve anonymously like the git:// protocol, and can also be pushed over with authentication and encryption like the SSH protocol.  
+In fact, for services like GitHub, the URL you use to view the repository online is the same URL you can use to clone and, if you have access, push over.  
+#### Dumb HTTP  
+If the server does not respond with a Git HTTP smart service, the Git client will try to fall back to the simpler Dumb HTTP protocol.  
+The Dumb protocol expects the bare Git repository to be served like normal files from the **web server**. Basically, all you have to do is put a bare Git repository under your HTTP document root and set up a specific **post-update hook**, and you’re done.  
+To allow read access to your repository over HTTP, do something like this:  
+> **$ cd /var/www/htdocs/
+$ git clone --bare /path/to/git_project gitproject.git
+$ cd gitproject.git
+$ mv hooks/post-update.sample hooks/post-update
+$ chmod a+x hooks/post-update**  
+The post-update hook that comes with Git by default runs the appropriate command (git update-server-info) to make HTTP fetching and cloning work properly. This command is run when you push to this repository (over SSH perhaps); then, other people can clone via something like:  
+**$ git clone https://example.com/gitproject.git**  
+### The SSH Protocol
+
