@@ -36,3 +36,7 @@ To clone a Git repository over SSH, you can specify an ssh:// URL like this:
 Or you can use the shorter scp-like syntax for the SSH protocol:  
 **$ git clone [user@]server:project.git**  
 ### The Git Protocol
+This is a special daemon that comes packaged with Git; it listens on a dedicated port **(9418)** that provides a service similar to the SSH protocol, but with absolutely **no authentication**. In order for a repository to be served over the Git protocol, you must create a
+**git-daemon-export-ok** file — the daemon won’t serve a repository without that file in it — but, other than that, there is no security.  
+
+## Getting Git on a Server
