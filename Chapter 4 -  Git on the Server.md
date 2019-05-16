@@ -59,4 +59,4 @@ Git will automatically **add group write permissions** to a repository properly 
 **$ ssh user@git.example.com  
 $ cd /srv/git/my_project.git  
 $ git init --bare --shared**  
-### Small Setups
+## Generating Your SSH Public Key
