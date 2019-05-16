@@ -113,7 +113,7 @@ Group=git
 WantedBy=multi-user.target  
 
 Finally, you’ll run systemctl enable git-daemon to automatically start the service on boot.
-Next, you have to tell Git which repositories to allow unauthenticated Git server-based access to. You can do this in each repository by creating a file named **git-daemon-export-ok**.  
+Next, you have to tell Git which repositories to allow unauthenticated Git server-based access to. You can do this in each repository by creating a file named ***git-daemon-export-ok***.  
 **$ cd /path/to/project.git  
 $ touch git-daemon-export-ok**  
 
