@@ -63,3 +63,20 @@ $ git init --bare --shared**
 If you don’t have these files (or you don’t even have a .ssh directory), you can create them by running a program called ssh-keygen, which is provided with the SSH package on Linux/macOS systems and comes with Git for Windows:  
 **$ ssh-keygen -o**  
 ## Setting Up the Server
+First, you create a git user account and a **.ssh** directory for that user.  
+**$ sudo adduser git  
+$ su git  
+$ cd  
+$ mkdir .ssh && chmod 700 .ssh  
+$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys**  
+Next, you need to add some developer SSH public keys to the authorized_keys file for the git user.  
+You just append them to the git user’s authorized_keys file in its .ssh directory:  
+**$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys  
+$ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys**  
+Now, you can set up an empty repository for them by running git init with the --bare option, which initializes the repository without a working directory:  
+**$ cd /srv/git  
+$ mkdir project.git  
+$ cd project.git  
+$ git init --bare    
+Initialized empty Git repository in /srv/git/project.git/**  
+Then, John or Josiecan push the first version of their project into that repository by adding it as a remote and pushing up a branch.  
