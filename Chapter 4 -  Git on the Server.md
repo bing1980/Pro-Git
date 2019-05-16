@@ -49,4 +49,14 @@ In order to clone your repository to create a new bare repository, you run the c
 This is roughly equivalent to something like:  
 **$ cp -Rf my_project/.git my_project.git**  
 ### Putting the Bare Repository on a Server  
-
+Now that you have a bare copy of your repository, all you need to do is put it on a server and set up your protocols.  
+Let’s say you’ve set up a server called git.example.com to which you have SSH access, and you want to store all your Git repositories under the /srv/git directory.  
+**$ scp -r my_project.git user@git.example.com:/srv/git**  
+At this point, other users who have SSH-based **read access** to the /srv/git directory can **clone** your repository by running:    
+**$ git clone user@git.example.com:/srv/git/my_project.git**  
+If a user SSHs into a server and has **write access** to the /srv/git/my_project.git directory, they will also automatically have **push access**.  
+Git will automatically **add group write permissions** to a repository properly if you run the **git init** command with the **--shared** option:  
+**$ ssh user@git.example.com  
+$ cd /srv/git/my_project.git  
+$ git init --bare --shared**  
+### Small Setups
