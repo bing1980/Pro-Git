@@ -94,3 +94,27 @@ $ vim README
 $ git commit -am 'fix for the README file'  
 $ git push origin master**  
 ## Git Daemon
+In any case, the Git protocol is relatively easy to set up. Basically, you need to run this command in a daemonized manner:  
+**$ git daemon --reuseaddr --base-path=/srv/git/ /srv/git/**  
+The --reuseaddr option allows the server to restart without waiting for old connections to time out, while the --base-path option allows people to clone projects without specifying the entire path, and the path at the end tells the Git daemon where to look for repositories to export.  
+Since systemd is the most common init system among modern Linux distributions, you can use it for that purpose. Simply place a file in **/etc/systemd/system/git-daemon.service** with these contents:  
+> [Unit]  
+Description=Start Git Daemon  
+[Service]  
+ExecStart=/usr/bin/git daemon --reuseaddr --base-path=/srv/git/ /srv/git/  
+Restart=always  
+RestartSec=500ms  
+StandardOutput=syslog  
+StandardError=syslog  
+SyslogIdentifier=git-daemon  
+User=git  
+Group=git  
+[Install]  
+WantedBy=multi-user.target  
+
+Finally, you’ll run systemctl enable git-daemon to automatically start the service on boot.
+Next, you have to tell Git which repositories to allow unauthenticated Git server-based access to. You can do this in each repository by creating a file named **git-daemon-export-ok**.  
+**$ cd /path/to/project.git  
+$ touch git-daemon-export-ok**  
+
+## Smart HTTP
