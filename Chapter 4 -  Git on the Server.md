@@ -40,3 +40,13 @@ This is a special daemon that comes packaged with Git; it listens on a dedicated
 **git-daemon-export-ok** file — the daemon won’t serve a repository without that file in it — but, other than that, there is no security.  
 
 ## Getting Git on a Server
+In order to initially set up any Git server, you have to export an existing repository into a new **bare repository** — a repository that doesn’t contain a working directory.  
+In order to clone your repository to create a new bare repository, you run the clone command with the **--bare** option like this:  
+**$ git clone --bare my_project my_project.git**  
+> Cloning into bare repository 'my_project.git'...  
+> done.  
+
+This is roughly equivalent to something like:  
+**$ cp -Rf my_project/.git my_project.git**  
+### Putting the Bare Repository on a Server  
+
