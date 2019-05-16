@@ -80,7 +80,7 @@ $ cd project.git
 $ git init --bare    
 Initialized empty Git repository in /srv/git/project.git/**  
 Then, John or Josiecan push the first version of their project into that repository by adding it as a remote and pushing up a branch.  
-* on John's computer
+(for example: on John's computer)  
 **$ cd myproject  
 $ git init  
 $ git add .  
