@@ -60,3 +60,6 @@ Git will automatically **add group write permissions** to a repository properly 
 $ cd /srv/git/my_project.git  
 $ git init --bare --shared**  
 ## Generating Your SSH Public Key
+If you don’t have these files (or you don’t even have a .ssh directory), you can create them by running a program called ssh-keygen, which is provided with the SSH package on Linux/macOS systems and comes with Git for Windows:  
+**$ ssh-keygen -o**  
+## Setting Up the Server
