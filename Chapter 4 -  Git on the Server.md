@@ -142,3 +142,4 @@ Require valid-user
 That will require you to create a .htpasswd file containing the passwords of all the valid users. Here is an example of adding a “schacon” user to the file:    
 **$ htpasswd -c /srv/git/.htpasswd schacon**  
 
+## GitWeb
