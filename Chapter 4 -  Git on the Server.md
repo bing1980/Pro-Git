@@ -143,3 +143,39 @@ That will require you to create a .htpasswd file containing the passwords of all
 **$ htpasswd -c /srv/git/.htpasswd schacon**  
 
 ## GitWeb
+Git comes with a CGI script called GitWeb that is sometimes used for setting up a simple **web-based visualizer**:  
+To start instaweb with a non-lighttpd handler, you can run it with the --httpd option:  
+**$ git instaweb --httpd=webrick**  
+> [2009-02-21 10:02:21] INFO WEBrick 1.3.1  
+[2009-02-21 10:02:21] INFO ruby 1.8.6 (2008-03-03) [universal-darwin9.0]  
+
+We’ll walk through installing GitWeb manually very quickly.   
+First, you need to get the Git source code, which GitWeb comes with, and generate the custom CGI script:  
+**$ git clone git://git.kernel.org/pub/scm/git/git.git  
+$ cd git/  
+$ make GITWEB_PROJECTROOT="/srv/git" prefix=/usr gitweb**    
+> SUBDIR gitweb  
+SUBDIR ../  
+make[2]: \`GIT-VERSION-FILE' is up to date.  
+GEN gitweb.cgi  
+GEN static/gitweb.js  
+
+**$ sudo cp -Rf gitweb /var/www/**  
+
+
+Now, you need to make Apache use CGI for that script, for which you can add a VirtualHost:  
+> <VirtualHost *:80>  
+ServerName gitserver  
+DocumentRoot /var/www/gitweb  
+<Directory /var/www/gitweb>  
+Options +ExecCGI +FollowSymLinks +SymLinksIfOwnerMatch  
+AllowOverride All  
+order allow,deny  
+Allow from all  
+AddHandler cgi-script cgi  
+DirectoryIndex gitweb.cgi  
+</Directory>  
+</VirtualHost>  
+
+
+
