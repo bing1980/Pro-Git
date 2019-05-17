@@ -178,6 +178,21 @@ DirectoryIndex gitweb.cgi
 </VirtualHost>  
 
 ## GitLab
+### Installation  
+GitLab is a database-backed web application.
+You can download a virtual machine image or a one-click installer from https://bitnami.com/stack/gitlab, you can also follow the guidence from https://gitlab.com/gitlab-org/gitlab-ce/tree/master for standalone installation.  
+### Administration  
+GitLab’s administration interface is accessed over the web. Simply point your browser to the hostname or IP address where GitLab is installed, and log in as an admin user.  
+The default username is **admin@local.host**, and the default password is **5iveL!fe**.  
+### Basic Usage 
+* The first thing you’ll want to do with GitLab is create a new project. This is accomplished by clicking the “+” icon on the toolbar.
+* For an existing local repository, this command will create a remote named gitlab to the hosted location:  
+**$ git remote add gitlab https://server/namespace/project.git**  
+### Working Together
+
+
+
+
 
 
 
