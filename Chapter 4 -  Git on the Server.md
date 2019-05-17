@@ -118,3 +118,27 @@ Next, you have to tell Git which repositories to allow unauthenticated Git serve
 $ touch git-daemon-export-ok**  
 
 ## Smart HTTP
+Setting up Smart HTTP is basically just enabling a CGI script that is provided with Git called git-http-backend on the server. This CGI will read the path and headers sent by a git fetch or git push to an HTTP URL and determine if the client can communicate over HTTP.  
+
+If you don’t have Apache setup, you can do so on a Linux box with something like this:  
+**$ sudo apt-get install apache2 apache2-utils    
+$ a2enmod cgi alias env**  
+You’ll also need to set the Unix user group of the /srv/git directories to www-data so your web server can read- and write-access the repositories:  
+**$ chgrp -R www-data /srv/git**  
+Next we need to add some things to the Apache configuration to run the git-http-backend as the handler for anything coming into the /git path of your web server:  
+**SetEnv GIT_PROJECT_ROOT /srv/git  
+SetEnv GIT_HTTP_EXPORT_ALL  
+ScriptAlias /git/ /usr/lib/git-core/git-http-backend/**  
+Finally you’ll want to tell Apache to allow requests to git-http-backend and make writes be authenticated somehow, possibly with an Auth block like this:  
+> \<Files "git-http-backend">  
+AuthType Basic  
+AuthName "Git Access"  
+AuthUserFile /srv/git/.htpasswd  
+Require expr !(%{QUERY_STRING} -strmatch '*service=git-receive-pack*' ||  
+%{REQUEST_URI} =~ m#/git-receive-pack$#)  
+Require valid-user  
+\</Files>  
+
+That will require you to create a .htpasswd file containing the passwords of all the valid users. Here is an example of adding a “schacon” user to the file:    
+**$ htpasswd -c /srv/git/.htpasswd schacon**  
+
