@@ -188,11 +188,4 @@ The default username is **admin@local.host**, and the default password is **5ive
 * The first thing you’ll want to do with GitLab is create a new project. This is accomplished by clicking the “+” icon on the toolbar.
 * For an existing local repository, this command will create a remote named gitlab to the hosted location:  
 **$ git remote add gitlab https://server/namespace/project.git**  
-### Working Together
-
-
-
-
-
-
 
