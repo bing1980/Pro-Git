@@ -16,3 +16,5 @@ This is a variant of a multiple-repository workflow. It’s generally used by hu
 3. The dictator merges the lieutenants' master branches into the dictator’s master branch.  
 4. Finally, the dictator pushes that master branch to the reference repository so the other developers can rebase on it.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/DL_workflow.PNG)
+
+## Contributing to a Project
