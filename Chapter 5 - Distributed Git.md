@@ -18,3 +18,7 @@ This is a variant of a multiple-repository workflow. It’s generally used by hu
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/DL_workflow.PNG)
 
 ## Contributing to a Project
+The main difficulty with describing how to contribute to a project are the numerous variations on how to do that.  
+The first variable is **active contributor count** — how many users are actively contributing code to this project, and how often?  
+The next variable is the **workflow** in use for the project.  
+The next variable is your **commit access**.  
