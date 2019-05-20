@@ -10,3 +10,9 @@ This scenario often includes a canonical repository that represents the “offic
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/IM_workflow.PNG)  
 This is a very common workflow with hub-based tools like **GitHub** or **GitLab**, where it’s easy to fork a project and push your changes into your fork for everyone to see.  
 ### Dictator and Lieutenants Workflow
+This is a variant of a multiple-repository workflow. It’s generally used by huge projects with hundreds of collaborators. The process works like this:  
+1.  Regular developers work on their topic branch and rebase their work on top of master. The master branch is that of the reference repository to which the dictator pushes.  
+2. Lieutenants merge the developers' topic branches into their master branch.  
+3. The dictator merges the lieutenants' master branches into the dictator’s master branch.  
+4. Finally, the dictator pushes that master branch to the reference repository so the other developers can rebase on it.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/DL_workflow.PNG)
