@@ -62,5 +62,11 @@ To john@githost:simplegit.git
 ! [rejected] master -> master (non-fast forward)  
 error: failed to push some refs to 'john@githost:simplegit.git'  
 
-In this case, John’s push fails because of Jessica’s earlier push of her changes. John must first fetch Jessica’s upstream changes and merge them into his local repository before he will be allowed to push. As a first step, John fetches Jessica’s work:  
+In this case, John’s push fails because of Jessica’s earlier push of her changes. John must first fetch Jessica’s upstream changes and merge them into his local repository before he will be allowed to push.  
+As a first step, John fetches Jessica’s work:    
+> $ git fetch origin  
+...  
+From john@githost:simplegit  
++ 049d078...fbff5bc master -> origin/master  
+
 ![image]()
