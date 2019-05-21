@@ -95,7 +95,32 @@ Suddenly, Jessica learns that John has pushed some new work to the server and sh
 From jessica@githost:simplegit  
 fbff5bc..72bbc59 master -> origin/master  
 
+Jessica’s history now looks like this:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST5.PNG)  
+Jessica thinks her topic branch is ready, but she wants to know what part of John’s fetched work she has to merge into her work so that she can push. She runs **git log --no-merges issue54..origin/master** to find out.  
+Now, Jessica can merge her topic work into her master branch, merge John’s work (origin/master) into her master branch, and then push back to the server again.  
+First, Jessica switches back to her master branch in preparation for integrating all this work:  
+> $ git checkout master  
+Switched to branch 'master'  
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.  
+
+Jessica can merge either origin/master or issue54 first,the order doesn’t matter.  
+She chooses to merge the issue54 branch first:  
+> $ git merge issue54  
+Updating fbff5bc..4af4298  
+Fast forward  
+README | 1 +  
+lib/simplegit.rb | 6 +++++-  
+2 files changed, 6 insertions(+), 1 deletions(-)  
+
+Jessica now completes the local merging process by merging John’s earlier fetched work that is sitting in the origin/master branch:  
+> $ git merge origin/master  
+Auto-merging lib/simplegit.rb  
+Merge made by the 'recursive' strategy.  
+lib/simplegit.rb | 2 +-  
+1 files changed, 1 insertions(+), 1 deletions(-)  
+
+Jessica’s history now looks like this:  
 
 
 
