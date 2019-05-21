@@ -28,3 +28,4 @@ First, your submissions should not contain any whitespace errors. Git provides a
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/gitdiff.PNG)  
 Next, try to make each commit a logically separate changeset.  
 The last thing to keep in mind is the commit message. Getting in the habit of creating quality commit messages makes using and collaborating with Git a lot easier.  
+### Private Small Team
