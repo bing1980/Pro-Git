@@ -24,8 +24,19 @@ The main difficulty with describing how to contribute to a project are the numer
 * The next variable is your **commit access**.  
 ### Commit Guidelines
 The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches — you can read it in the Git source code in the **Documentation/SubmittingPatches** file.  
-First, your submissions should not contain any whitespace errors. Git provides an easy way to check for this — before you commit, run **git diff --check**  
+First, your submissions should not contain any **whitespace errors**. Git provides an easy way to check for this — before you commit, run **git diff --check**  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/gitdiff.PNG)  
 Next, try to make each commit a logically separate changeset.  
 The last thing to keep in mind is the commit message. Getting in the habit of creating quality commit messages makes using and collaborating with Git a lot easier.  
 ### Private Small Team
+Let’s see what it might look like when two developers start to work together with a shared repository.  
+The first developer, John, clones the repository, makes a change, and commits locally:  
+> $ git clone john@githost:simplegit.git  
+Cloning into 'simplegit'...  
+...  
+$ cd simplegit/  
+$ vim lib/simplegit.rb  
+$ git commit -am 'remove invalid default value'  
+[master 738ee87] remove invalid default value  
+1 files changed, 1 insertions(+), 1 deletions(-)  
+
