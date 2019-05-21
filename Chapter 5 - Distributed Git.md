@@ -40,3 +40,20 @@ $ git commit -am 'remove invalid default value'
 [master 738ee87] remove invalid default value  
 1 files changed, 1 insertions(+), 1 deletions(-)  
 
+The second developer, Jessica, does the same thing — clones the repository and commits a change:  
+> $ git clone jessica@githost:simplegit.git  
+Cloning into 'simplegit'...  
+...  
+$ cd simplegit/  
+$ vim TODO  
+$ git commit -am 'add reset task'  
+[master fbff5bc] add reset task  
+1 files changed, 1 insertions(+), 0 deletions(-)  
+
+Now, Jessica pushes her work to the server, which works just fine:  
+> $ git push origin master  
+...  
+To jessica@githost:simplegit.git  
+1edee6b..fbff5bc master -> master  
+
+Continuing with this example, shortly afterwards, John makes some changes, commits them to his local repository, and tries to push them to the same server:  
