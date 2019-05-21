@@ -23,3 +23,7 @@ The main difficulty with describing how to contribute to a project are the numer
 * The second variable is the **workflow** in use for the project.  
 * The next variable is your **commit access**.  
 ### Commit Guidelines
+The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches — you can read it in the Git source code in the **Documentation/SubmittingPatches** file.  
+First, your submissions should not contain any whitespace errors. Git provides an easy way to check for this — before you commit, run **git diff --check**  
+Next, try to make each commit a logically separate changeset.  
+The last thing to keep in mind is the commit message. Getting in the habit of creating quality commit messages makes using and collaborating with Git a lot easier.  
