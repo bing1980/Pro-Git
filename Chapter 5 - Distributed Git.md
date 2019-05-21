@@ -137,6 +137,35 @@ The general sequence is something like this:
 In this next scenario, you’ll look at contributor roles in a larger private group.  
 Let’s say that John and Jessica are working together on one feature (call this “featureA”), while Jessica and a third developer, Josie, are working on a second (say, “featureB”). In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the master branch of the main repo can be updated only by those engineers.  
 
+Assuming she already has her repository cloned, she decides to work on featureA first. She creates a new branch for the feature and does some work on it there:  
+> $ git checkout -b featureA  
+Switched to a new branch 'featureA'  
+$ vim lib/simplegit.rb  
+$ git commit -am 'add limit to log function'  
+
+At this point, she needs to share her work with John, so she pushes her featureA branch commits up to the server. Jessica doesn’t have push access to the master branch — only the integrators do — so she has to push to another branch in order to collaborate with John:  
+> $ git push -u origin featureA  
+...  
+To jessica@githost:simplegit.git  
+\* [new branch] featureA -> featureA  
+
+While she waits for feedback from John, Jessica decides to start working on featureB with Josie. To begin, she starts a new feature branch, basing it off the server’s master branch:  
+> $ git fetch origin  
+$ git checkout -b featureB origin/master  
+Switched to a new branch 'featureB'  
+
+Now, Jessica makes a couple of commits on the featureB branch:  
+> $ vim lib/simplegit.rb  
+$ git commit -am 'made the ls-tree function recursive'  
+[featureB e5b0fdc] made the ls-tree function recursive  
+1 files changed, 1 insertions(+), 1 deletions(-)  
+$ vim lib/simplegit.rb  
+$ git commit -am 'add ls-files'  
+[featureB 8512791] add ls-files  
+1 files changed, 5 insertions(+), 0 deletions(-)  
+
+Jessica’s repository now looks like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT1.PNG)  
 
 
 
