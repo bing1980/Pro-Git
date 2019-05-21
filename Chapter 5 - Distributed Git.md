@@ -121,6 +121,20 @@ lib/simplegit.rb | 2 +-
 1 files changed, 1 insertions(+), 1 deletions(-)  
 
 Jessica’s history now looks like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST6.PNG)  
+Now origin/master is reachable from Jessica’s master branch, so she should be able to successfully push:  
+> $ git push origin master  
+...  
+To jessica@githost:simplegit.git  
+72bbc59..8059c15 master -> master  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST7.PNG)  
+
+The general sequence is something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST8.PNG)  
+
+### Private Managed Team
+
 
 
 
