@@ -69,4 +69,5 @@ As a first step, John fetches Jessica’s work:
 From john@githost:simplegit  
 + 049d078...fbff5bc master -> origin/master  
 
+At this point, John’s local repository looks something like this:  
 ![image]()
