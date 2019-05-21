@@ -215,7 +215,11 @@ To jessica@githost:simplegit.git
 
 Jessica’s commit history now looks something like this:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT2.PNG)  
+After the integrators merge these branches into the mainline, a fetch will bring down the new merge commit, making the history look like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT3.PNG)  
+The sequence for the workflow you saw here is something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT4.PNG)  
 
-
+### Forked Public Project
 
 
