@@ -78,4 +78,12 @@ TODO | 1 \+
 1 files changed, 1 insertions(+), 0 deletions(-)  
 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST2.PNG) 
+After testing Jessica's work locally, he would like to push the new merged work up to the server:  
+> $ git push origin master  
+...  
+To john@githost:simplegit.git  
+fbff5bc..72bbc59 master -> master  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST3.PNG)  
+
 
