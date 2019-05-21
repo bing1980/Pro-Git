@@ -134,6 +134,8 @@ The general sequence is something like this:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST8.PNG)  
 
 ### Private Managed Team
+In this next scenario, you’ll look at contributor roles in a larger private group.  
+Let’s say that John and Jessica are working together on one feature (call this “featureA”), while Jessica and a third developer, Josie, are working on a second (say, “featureB”). In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the master branch of the main repo can be updated only by those engineers.  
 
 
 
