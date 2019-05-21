@@ -167,6 +167,20 @@ $ git commit -am 'add ls-files'
 Jessica’s repository now looks like this:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT1.PNG)  
 
+She’s ready to push her work, but gets an email from Josie that a branch with some initial “featureB” work on it was already pushed to the server as the featureBee branch. Jessica needs to merge those changes with her own before she can push her work to the server. Jessica first fetches Josie’s changes with **git fetch**:  
+> $ git fetch origin  
+...  
+From jessica@githost:simplegit  
+\* [new branch] featureBee -> origin/featureBee  
+
+Assuming Jessica is still on her checked-out featureB branch, she can now merge Josie’s work into that branch with git merge:  
+> $ git merge origin/featureBee  
+Auto-merging lib/simplegit.rb  
+Merge made by the 'recursive' strategy.  
+lib/simplegit.rb | 4 ++++  
+1 files changed, 4 insertions(+), 0 deletions(-)  
+
+
 
 
 
