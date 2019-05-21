@@ -56,4 +56,11 @@ Now, Jessica pushes her work to the server, which works just fine:
 To jessica@githost:simplegit.git  
 1edee6b..fbff5bc master -> master  
 
-Continuing with this example, shortly afterwards, John makes some changes, commits them to his local repository, and tries to push them to the same server:  
+Continuing with this example, shortly afterwards, John makes some changes, commits them to his local repository, and tries to push them to the same server:    
+> $ git push origin master  
+To john@githost:simplegit.git  
+! [rejected] master -> master (non-fast forward)  
+error: failed to push some refs to 'john@githost:simplegit.git'  
+
+In this case, John’s push fails because of Jessica’s earlier push of her changes. John must first fetch Jessica’s upstream changes and merge them into his local repository before he will be allowed to push. As a first step, John fetches Jessica’s work:  
+![image]()
