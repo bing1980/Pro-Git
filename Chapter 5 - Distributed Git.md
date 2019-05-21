@@ -86,4 +86,17 @@ fbff5bc..72bbc59 master -> master
 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST3.PNG)  
 
+In the meantime, Jessica has created a new topic branch called issue54, and made three commits to that branch.  
+She hasn’t fetched John’s changes yet, so her commit history looks like this:     
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST4.PNG)  
+Suddenly, Jessica learns that John has pushed some new work to the server and she wants to take a look at it, so she can fetch all new content from the server that she does not yet have with:  
+> $ git fetch origin  
+...  
+From jessica@githost:simplegit  
+fbff5bc..72bbc59 master -> origin/master  
+
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST5.PNG)  
+
+
+
 
