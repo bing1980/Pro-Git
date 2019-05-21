@@ -180,6 +180,41 @@ Merge made by the 'recursive' strategy.
 lib/simplegit.rb | 4 ++++  
 1 files changed, 4 insertions(+), 0 deletions(-)  
 
+At this point, Jessica wants to push all of this merged “featureB” work back to the server, but she doesn’t want to simply push her own featureB branch. Rather, since Josie has already started an upstream featureBee branch, Jessica wants to push to that branch, which she does with:  
+> $ git push -u origin featureB:featureBee  
+...  
+To jessica@githost:simplegit.git  
+fba9af8..cd685d1 featureB -> featureBee  
+
+This is called a refspec.  
+Suddenly, Jessica gets email from John, who tells her he’s pushed some changes to the featureA branch on which they are collaborating, and he asks Jessica to take a look at them. Again, Jessica runs a simple git fetch to fetch all new content from the server, including (of course) John’s latest work:  
+> $ git fetch origin  
+...  
+From jessica@githost:simplegit  
+3300904..aad881d featureA -> origin/featureA  
+
+Jessica can display the log of John’s new work by comparing the content of the newly-fetched featureA branch with her local copy of the same branch:  
+**$ git log featureA..origin/featureA**  
+If Jessica likes what she sees, she can merge John’s new work into her local featureA branch with:  
+> $ git checkout featureA  
+Switched to branch 'featureA'  
+$ git merge origin/featureA  
+Updating 3300904..aad881d  
+Fast forward  
+lib/simplegit.rb | 10 +++++++++-  
+1 files changed, 9 insertions(+), 1 deletions(-)  
+
+Finally, Jessica might want to make a couple minor changes to all that merged content, so she is free to make those changes, commit them to her local featureA branch, and push the end result back to the server.  
+> $ git commit -am 'small tweak'  
+[featureA 774b3ed] small tweak  
+1 files changed, 1 insertions(+), 1 deletions(-)  
+$ git push  
+...  
+To jessica@githost:simplegit.git  
+3300904..774b3ed featureA -> featureA  
+
+Jessica’s commit history now looks something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT2.PNG)  
 
 
 
