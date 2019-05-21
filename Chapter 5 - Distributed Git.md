@@ -70,4 +70,11 @@ From john@githost:simplegit
 \+ 049d078...fbff5bc master -> origin/master  
 
 At this point, John’s local repository looks something like this:  
-![image]()
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST1.PNG)  
+Now John can merge Jessica’s work that he fetched into his own local work:  
+> $ git merge origin/master  
+Merge made by the 'recursive' strategy.  
+TODO | 1 \+  
+1 files changed, 1 insertions(+), 0 deletions(-)  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/PST2.PNG) 
+
