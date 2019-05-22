@@ -306,3 +306,40 @@ def log(treeish = 'master')
 end  
 def ls_tree(treeish = 'master')   
 2.1.0  
+
+To email this to a mailing list, you can either paste the file into your email program or send it via a command-line program.  
+Git provides a tool to help you send properly formatted patches via IMAP, which may be easier for you.  
+First, you need to set up the imap section in your **~/.gitconfig** file:  
+> \[imap]  
+folder = "[Gmail]/Drafts"  
+host = imaps://imap.gmail.com  
+user = user@gmail.com  
+pass = YX]8g76G_2^sFbd  
+port = 993  
+sslverify = false  
+
+When that is set up, you can use git imap-send to place the patch series in the Drafts folder of the specified IMAP server:  
+> $ cat \*.patch |git imap-send  
+Resolving imap.gmail.com... ok  
+Connecting to [74.125.142.109]:993... ok  
+Logging in...  
+sending 2 messages  
+100% (2/2) done  
+
+You can also send the patches through an SMTP server:  
+> \[sendemail]  
+smtpencryption = tls  
+smtpserver = smtp.gmail.com  
+smtpuser = user@gmail.com  
+smtpserverport = 587  
+
+After this is done, you can use git send-email to send your patches:  
+> $ git send-email \*.patch  
+0001-added-limit-to-log-function.patch  
+0002-changed-log-output-to-30-from-25.patch  
+Who should the emails appear to be from? \[Jessica Smith <jessica@example.com>]  
+Emails will be sent from: Jessica Smith \<jessica@example.com>  
+Who should the emails be sent to? jessica@example.com  
+Message-ID to be used as In-Reply-To for the first email? y  
+
+## Maintaining a Project
