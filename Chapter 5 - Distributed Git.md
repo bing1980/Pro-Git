@@ -291,8 +291,7 @@ From 330090432754092d704da8e76ca5c05c198e71a8 Mon Sep 17 00:00:00 2001
 From: Jessica Smith <jessica@example.com>  
 Date: Sun, 6 Apr 2008 10:17:23 -0700  
 Subject: [PATCH 1/2] add limit to log function  
-Limit log functionality to the first 20  
----  
+Limit log functionality to the first 20   
 lib/simplegit.rb | 2 +-  
 1 files changed, 1 insertions(+), 1 deletions(-)  
 diff --git a/lib/simplegit.rb b/lib/simplegit.rb  
@@ -302,9 +301,8 @@ index 76f47bc..f9815f1 100644
 @@ -14,7 +14,7 @@ class SimpleGit  
 end  
 def log(treeish = 'master')  
-- command("git log #{treeish}")  
-+ command("git log -n 20 #{treeish}")  
+\- command("git log #{treeish}")  
+\+ command("git log -n 20 #{treeish}")  
 end  
-\def ls_tree(treeish = 'master')  
---  
+def ls_tree(treeish = 'master')   
 2.1.0  
