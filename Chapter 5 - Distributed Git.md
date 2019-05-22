@@ -252,4 +252,25 @@ $ git request-pull origin/master myfork
 $ git fetch origin  
 
 Now, each of your topics is contained within a silo — similar to a patch queue — that you can rewrite, rebase, and modify without the topics interfering or interdepending on each other, like so:  
-![image]()
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/FPP1.PNG)  
+Let’s say the project maintainer has pulled in a bunch of other patches and tried your first branch, but it no longer cleanly merges. In this case, you can try to rebase that branch on top of origin/master, resolve the conflicts for the maintainer, and then resubmit your changes:  
+> $ git checkout featureA  
+$ git rebase origin/master  
+$ git push -f myfork featureA  
+
+This rewrites your history to now look like:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/FPP2.PNG)  
+Because you rebased the branch, you have to specify the -f to your push command in order to be able to replace the featureA branch on the server with a commit that isn’t a descendant of it. An alternative would be to push this new work to a different branch on the server (perhaps called **featureAv2**).  
+
+You start a new branch based off the current origin/master branch, squash the featureB changes there, resolve any conflicts, make the implementation change, and then push that as a new branch:  
+> $ git checkout -b featureBv2 origin/master  
+$ git merge --squash featureB  
+... change implementation ...  
+$ git commit  
+$ git push myfork featureBv2  
+
+At this point, you can notify the maintainer that you’ve made the requested changes, and that they can find those changes in your featureBv2 branch:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/FPP3.PNG)  
+
+### Public Project over Email
+
