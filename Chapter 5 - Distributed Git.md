@@ -221,5 +221,21 @@ The sequence for the workflow you saw here is something like this:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/PMT4.PNG)  
 
 ### Forked Public Project
+First, you’ll probably want to clone the main repository, create a topic branch for the patch or patch series you’re planning to contribute, and do your work there. The sequence looks basically like this:  
+> $ git clone <url>  
+$ cd project  
+$ git checkout -b featureA  
+... work ...  
+$ git commit  
+... work ...  
+$ git commit  
 
-
+When your branch work is finished and you’re ready to contribute it back to the maintainers, go to the original project page and click the “Fork” button, creating your own writable fork of the project.  
+**$ git remote add myfork \<url>**  
+You then need to push your new work to this repository. It’s easiest to push the topic branch you’re working on to your forked repository, rather than merging that work into your master branch and pushing that.  
+In any event, you can push your work with:  
+**$ git push -u myfork featureA**  
+Once your work has been pushed to your fork of the repository, you need to notify the maintainers of the original project that you have work you’d like them to merge. This is often called a **pull request**.  
+The **git request-pull** command takes the base branch into which you want your topic branch pulled and the Git repository URL you want them to pull from, and produces a summary of all the changes you’re asking to be pulled.  
+**$ git request-pull origin/master myfork**  
+This output can be sent to the maintainer — it tells them where the work was branched from, summarizes the commits, and identifies from where the new work is to be pulled.
