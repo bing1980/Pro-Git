@@ -230,12 +230,26 @@ $ git commit
 ... work ...  
 $ git commit  
 
-When your branch work is finished and you’re ready to contribute it back to the maintainers, go to the original project page and click the “Fork” button, creating your own writable fork of the project.  
+When your branch work is finished and you’re ready to contribute it back to the maintainers, go to the original project page and click the “Fork” button, creating your own writable fork of the project:
 **$ git remote add myfork \<url>**  
-You then need to push your new work to this repository. It’s easiest to push the topic branch you’re working on to your forked repository, rather than merging that work into your master branch and pushing that.  
+
+You then need to push your new work to this repository. It’s easiest to push the topic branch you’re working on to your forked repository, rather than merging that work into your master branch and pushing that.
 In any event, you can push your work with:  
 **$ git push -u myfork featureA**  
+
 Once your work has been pushed to your fork of the repository, you need to notify the maintainers of the original project that you have work you’d like them to merge. This is often called a **pull request**.  
 The **git request-pull** command takes the base branch into which you want your topic branch pulled and the Git repository URL you want them to pull from, and produces a summary of all the changes you’re asking to be pulled.  
 **$ git request-pull origin/master myfork**  
-This output can be sent to the maintainer — it tells them where the work was branched from, summarizes the commits, and identifies from where the new work is to be pulled.
+This output can be sent to the maintainer — it tells them where the work was branched from, summarizes the commits, and identifies from where the new work is to be pulled.  
+
+If you want to submit a second topic of work to the project, don’t continue working on the topic branch you just pushed up — start over from the main repository’s master branch:  
+> $ git checkout -b featureB origin/master  
+... work ...  
+$ git commit  
+$ git push myfork featureB  
+$ git request-pull origin/master myfork  
+... email generated request pull to maintainer ...  
+$ git fetch origin  
+
+Now, each of your topics is contained within a silo — similar to a patch queue — that you can rewrite, rebase, and modify without the topics interfering or interdepending on each other, like so:  
+![image]()
