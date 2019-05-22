@@ -273,4 +273,38 @@ At this point, you can notify the maintainer that you’ve made the requested ch
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/FPP3.PNG)  
 
 ### Public Project over Email
+The workflow is similar to the previous use case — you create topic branches for each patch series you work on. The difference is how you submit them to the project. Instead of forking the project and pushing to your own writable version, you generate email versions of each commit series and email them to the developer mailing list:  
+> $ git checkout -b topicA  
+... work ...  
+$ git commit  
+... work ...  
+$ git commit  
 
+You use git format-patch to generate the mbox-formatted files that you can email to the list — it turns each commit into an email message with the first line of the commit message as the subject and the rest of the message plus the patch that the commit introduces as the body.  
+> $ git format-patch -M origin/master  
+0001-add-limit-to-log-function.patch  
+0002-changed-log-output-to-30-from-25.patch  
+
+The format-patch command prints out the names of the patch files it creates. The -M switch tells Git to look for renames. The files end up looking like this:  
+> $ cat 0001-add-limit-to-log-function.patch  
+From 330090432754092d704da8e76ca5c05c198e71a8 Mon Sep 17 00:00:00 2001  
+From: Jessica Smith <jessica@example.com>  
+Date: Sun, 6 Apr 2008 10:17:23 -0700  
+Subject: [PATCH 1/2] add limit to log function  
+Limit log functionality to the first 20  
+---  
+lib/simplegit.rb | 2 +-  
+1 files changed, 1 insertions(+), 1 deletions(-)  
+diff --git a/lib/simplegit.rb b/lib/simplegit.rb  
+index 76f47bc..f9815f1 100644  
+--- a/lib/simplegit.rb  
+\+++ b/lib/simplegit.rb  
+@@ -14,7 +14,7 @@ class SimpleGit  
+end  
+def log(treeish = 'master')  
+- command("git log #{treeish}")  
++ command("git log -n 20 #{treeish}")  
+end  
+\def ls_tree(treeish = 'master')  
+--  
+2.1.0  
