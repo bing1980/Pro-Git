@@ -352,4 +352,6 @@ Or, if you want to also switch to it immediately, you can use the checkout **-b*
 **$ git checkout -b sc/ruby_client master**  
 
 ### Applying Patches from Email
+If you receive a patch over email that you need to integrate into your project, you need to apply the patch in your topic branch to evaluate it. There are two ways to apply an emailed patch: with **git apply** or with **git am**.  
+#### Applying a Patch with apply
 
