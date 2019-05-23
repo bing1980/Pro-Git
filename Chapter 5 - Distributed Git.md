@@ -343,3 +343,13 @@ Who should the emails be sent to? jessica@example.com
 Message-ID to be used as In-Reply-To for the first email? y  
 
 ## Maintaining a Project
+In addition to knowing how to contribute effectively to a project, you’ll likely need to know how to maintain one. This can consist of accepting and applying patches generated via format-patch and emailed to you, or integrating changes in remote branches for repositories you’ve added as remotes to your project.  
+### Working in Topic Branches
+When you’re thinking of integrating new work, it’s generally a good idea to try it out in a topic branch — a temporary branch specifically made to try out that new work.
+The maintainer of the Git project tends to namespace these branches as well — such as **sc/ruby_client**, where **sc** is short for the person who contributed the work. As you’ll remember, you can create the branch based off your master branch like this:  
+**$ git branch sc/ruby_client master**  
+Or, if you want to also switch to it immediately, you can use the checkout **-b**option:  
+**$ git checkout -b sc/ruby_client master**  
+
+### Applying Patches from Email
+
