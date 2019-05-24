@@ -354,4 +354,7 @@ Or, if you want to also switch to it immediately, you can use the checkout **-b*
 ### Applying Patches from Email
 If you receive a patch over email that you need to integrate into your project, you need to apply the patch in your topic branch to evaluate it. There are two ways to apply an emailed patch: with **git apply** or with **git am**.  
 #### Applying a Patch with apply
-
+If you received the patch from someone who generated it with **git diff**, you can apply it with the **git apply** command.
+Assuming you saved the patch at /tmp/patch-ruby-client.patch, you can apply the patch like this:  
+**$ git apply /tmp/patch-ruby-client.patch**  
+**git apply** is overall much more conservative than patch. It won’t create a commit for you — after running it, you must stage and commit the changes introduced manually.  
