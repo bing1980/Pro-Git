@@ -382,4 +382,19 @@ add limit to log function
 Limit log functionality to the first 20  
 
 The Commit information indicates the person who applied the patch and the time it was applied. The Author information is the individual who originally created the patch and when it was originally created.  
+But it’s possible that the patch won’t apply cleanly, in that case, the git am process will fail and ask you what you want to do:  
+> $ git am 0001-seeing-if-this-helps-the-gem.patch  
+Applying: seeing if this helps the gem  
+error: patch failed: ticgit.gemspec:1  
+error: ticgit.gemspec: patch does not apply  
+Patch failed at 0001.  
+When you have resolved this problem run "git am --resolved".  
+If you would prefer to skip this patch, instead run "git am --skip".  
+To restore the original branch and stop patching run "git am --abort".  
+
+You solve this issue much the same way — edit the file to **resolve the conflict, stage the new file, and then run git am --resolved** to continue to the next patch:  
+**$ (fix the file)  
+$ git add ticgit.gemspec  
+$ git am --resolved  
+Applying: seeing if this helps the gem**  
 
