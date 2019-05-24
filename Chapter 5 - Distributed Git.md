@@ -358,3 +358,9 @@ If you received the patch from someone who generated it with **git diff**, you c
 Assuming you saved the patch at /tmp/patch-ruby-client.patch, you can apply the patch like this:  
 **$ git apply /tmp/patch-ruby-client.patch**  
 **git apply** is overall much more conservative than patch. It won’t create a commit for you — after running it, you must stage and commit the changes introduced manually.  
+You can also use git apply to see if a patch applies cleanly before you try actually applying it — you can run git apply --check with the patch:  
+> $ git apply --check 0001-seeing-if-this-helps-the-gem.patch  
+error: patch failed: ticgit.gemspec:1  
+error: ticgit.gemspec: patch does not apply  
+
+#### Applying a Patch with am
