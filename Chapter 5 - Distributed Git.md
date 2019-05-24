@@ -398,3 +398,18 @@ $ git add ticgit.gemspec
 $ git am --resolved  
 Applying: seeing if this helps the gem**  
 
+If you want Git to try a bit more intelligently to resolve the conflict, you can pass a **-3** option to it, which makes Git attempt a three-way merge:  
+> $ git am -3 0001-seeing-if-this-helps-the-gem.patch  
+Applying: seeing if this helps the gem  
+error: patch failed: ticgit.gemspec:1  
+error: ticgit.gemspec: patch does not apply  
+Using index info to reconstruct a base tree...  
+Falling back to patching base and 3-way merge...  
+No changes -- Patch already applied.  
+
+In this case, without the -3 option the patch would have been considered as a conflict. Since the -3 option was used the patch applied cleanly.  
+If you’re applying a number of patches from an mbox, you can also run the am command in interactive mode, which stops at each patch it finds and asks if you want to apply it:  
+**$ git am -3 -i mbox**  
+
+#### Checking Out Remote Branches
+
