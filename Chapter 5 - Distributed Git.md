@@ -411,5 +411,5 @@ In this case, without the -3 option the patch would have been considered as a co
 If you’re applying a number of patches from an mbox, you can also run the am command in interactive mode, which stops at each patch it finds and asks if you want to apply it:  
 **$ git am -3 -i mbox**  
 
-#### Checking Out Remote Branches
+### Checking Out Remote Branches
 
