@@ -444,5 +444,15 @@ Date: Mon Oct 22 19:38:36 2008 -0700
 
 To see a full diff of what would happen if you were to merge this topic branch with another branch, you may think to run this:  
 **$ git diff master**  
+If master is a direct ancestor of your topic branch, this isn’t a problem; but if the two histories have diverged, the diff will look like you’re adding all the new stuff in your topic branch and removing everything unique to the master branch.  
+What you really want to see are the changes added to the topic branch — the work you’ll introduce if you merge this branch with master. You can do that by explicitly figuring out the common ancestor and then running your diff on it:  
+**$ git merge-base contrib master  
+36c7dba2c95e6bbb78dfa822519ecfec6e1ca649  
+$ git diff 36c7db**  
+or, more concisely:  
+**$ git diff $(git merge-base contrib master)**  
+Git provides another shorthand for doing the same thing: the triple-dot syntax:  
+**$ git diff master...contrib**  
+### Integrating Contributed Work
 
 
