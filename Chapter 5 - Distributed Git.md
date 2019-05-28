@@ -420,4 +420,12 @@ $ git fetch jessica
 $ git checkout -b rubyclient jessica/ruby-client**  
 If she emails you again later with another branch containing another great feature, you could directly fetch and checkout because you already have the remote setup.  
 
+If you aren’t working with a person consistently but still want to pull from them in this way, you can provide the URL of the remote repository to the git pull command. This does a one-time pull and doesn’t save the URL as a remote reference:  
+**$ git pull https://github.com/onetimeguy/project**  
+> From https://github.com/onetimeguy/project  
+\* branch HEAD -> FETCH_HEAD  
+Merge made by the 'recursive' strategy.  
+
+### Determining What Is Introduced
+
 
