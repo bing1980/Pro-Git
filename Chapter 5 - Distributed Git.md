@@ -453,6 +453,8 @@ or, more concisely:
 **$ git diff $(git merge-base contrib master)**  
 Git provides another shorthand for doing the same thing: the triple-dot syntax:  
 **$ git diff master...contrib**  
+This command shows you only the work your current topic branch has introduced since its common ancestor with master.  
+
 ### Integrating Contributed Work
 
 
