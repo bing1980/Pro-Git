@@ -427,5 +427,22 @@ If you aren’t working with a person consistently but still want to pull from t
 Merge made by the 'recursive' strategy.  
 
 ### Determining What Is Introduced
+You can exclude commits in the master branch by adding the **--not** option before the branch name.  
+For example, if your contributor sends you two patches and you create a branch called contrib and applied those patches there, you can run this:  
+**$ git log contrib --not master**  
+> commit 5b6235bd297351589efc4d73316f0a68d484f118  
+Author: Scott Chacon <schacon@gmail.com>  
+Date: Fri Oct 24 09:53:59 2008 -0700  
+
+> seeing if this helps the gem  
+
+> commit 7482e0d16d04bea79d0dba8988cc78df655f16a0  
+Author: Scott Chacon <schacon@gmail.com>  
+Date: Mon Oct 22 19:38:36 2008 -0700  
+
+> updated the gemspec to hopefully work better
+
+To see a full diff of what would happen if you were to merge this topic branch with another branch, you may think to run this:  
+**$ git diff master**  
 
 
