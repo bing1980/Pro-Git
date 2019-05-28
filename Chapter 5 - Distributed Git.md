@@ -412,4 +412,12 @@ If you’re applying a number of patches from an mbox, you can also run the am c
 **$ git am -3 -i mbox**  
 
 ### Checking Out Remote Branches
+If your contribution came from a Git user who set up their own repository, pushed a number of changes into it, and then sent you the URL to the repository and the name of the remote branch the changes are in, you can add them as a remote and do merges locally.  
+
+For instance, if Jessica sends you an email saying that she has a great new feature in the ruby-client branch of her repository, you can test it by adding the remote and checking out that branch locally:  
+**$ git remote add jessica git://github.com/jessica/myproject.git  
+$ git fetch jessica  
+$ git checkout -b rubyclient jessica/ruby-client**  
+If she emails you again later with another branch containing another great feature, you could directly fetch and checkout because you already have the remote setup.  
+
 
