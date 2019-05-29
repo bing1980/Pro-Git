@@ -470,6 +470,14 @@ The Git project has four long-running branches: master, next, and pu (proposed u
 If the topics still need work, they’re merged into pu instead. When it’s determined that they’re totally stable, the topics are re-merged into master. The next and pu branches are then rebuilt from the master. This means master almost always moves forward, next is rebased occasionally, and pu is rebased even more often:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/integratingCW4.PNG)  
 #### Rebasing and Cherry-Picking Workflows
+Other maintainers prefer to rebase or cherry-pick contributed work on top of their master branch, rather than merging it in, to keep a mostly linear history.  
+For example, suppose you have a project that looks like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/integratingCW5.PNG)  
+If you want to pull commit e43a6 into your master branch, you can run:  
+**$ git cherry-pick e43a6**  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/integratingCW6.PNG)  
+#### Rerere
+
 
 
 
