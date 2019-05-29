@@ -480,6 +480,24 @@ If you want to pull commit e43a6 into your master branch, you can run:
 Rerere stands for “reuse recorded resolution” — it’s a way of shortcutting manual conflict resolution. When rerere is enabled, Git will keep a set of pre- and post-images from successful merges, and if it notices that there’s a conflict that looks exactly like one you’ve already fixed, it’ll just use the fix from last time, without bothering you with it.  
 
 ### Tagging Your Releases
+If you decide to sign the tag as the maintainer, the tagging may look something like this:  
+**$ git tag -s v1.5 -m 'my signed 1.5 tag'**  
+> You need a passphrase to unlock the secret key for  
+user: "Scott Chacon <schacon@gmail.com>"  
+1024-bit DSA key, ID F721C45A, created 2009-02-09  
+
+If you do sign your tags, you may have the problem of distributing the public PGP key used to sign your tags. The maintainer of the Git project has solved this issue by including their public key as a blob in the repository and then adding a tag that points directly to that content.  
+**$ gpg --list-keys**  
+> /Users/schacon/.gnupg/pubring.gpg   
+---------------------------------    
+pub 1024D/F721C45A 2009-02-09 [expires: 2010-02-09]  
+uid Scott Chacon <schacon@gmail.com>  
+sub 2048g/45D02282 2009-02-09 [expires: 2010-02-09]  
+
+Then, you can directly import the key into the Git database by exporting it and piping that through git hash-object, which writes a new blob with those contents into Git and gives you back the SHA-1 of the blob:  
+**$ gpg -a --export F721C45A | git hash-object -w --stdin**  
+> 659ef797d181633c87ec71ac3f9ba29fe5775b92  
+
 
 
 
