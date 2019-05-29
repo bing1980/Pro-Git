@@ -517,4 +517,19 @@ You can also create a zip archive in much the same way:
 **$ git archive master --prefix='project/' --format=zip > \`git describe master\`.zip**  
 
 ### The Shortlog
+It’s time to email your mailing list of people who want to know what’s happening in your project. A nice way of quickly getting a sort of changelog of what has been added to your project since your last release or email is to use the git shortlog command.  
+**$ git shortlog --no-merges master --not v1.0.1**  
+> Chris Wanstrath (6):  
+Add support for annotated tags to Grit::Tag  
+Add packed-refs annotated tag support.  
+Add Grit::Commit#to_patch  
+Update version and History.txt  
+Remove stray \`puts\`  
+Make ls_tree ignore nils  
+Tom Preston-Werner (4):  
+fix dates in history  
+dynamic version method  
+Version bump to 1.0.2  
+Regenerated gemspec for version 1.0.2  
+
 
