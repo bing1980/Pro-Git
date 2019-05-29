@@ -504,5 +504,17 @@ If you run git push --tags, the maintainer-pgp-pub tag will be shared with every
 **$ git show maintainer-pgp-pub | gpg --import**  
 
 ### Generating a Build Number
+Because Git doesn’t have monotonically increasing numbers like v123 or the equivalent to go with each commit, if you want to have a human-readable name to go with a commit, you can run git describe on that commit.  
+**$ git describe master  
+v1.6.2-rc1-20-g8c5b85c**  
 
+### Preparing a Release
+Now you want to release a build. One of the things you’ll want to do is create an archive of the latest snapshot of your code for those poor souls who don’t use Git. The command to do this is **git archive**:  
+**$ git archive master --prefix='project/' | gzip > \`git describe master\`.tar.gz  
+$ ls \*.tar.gz  
+v1.6.2-rc1-20-g8c5b85c.tar.gz**  
+You can also create a zip archive in much the same way:  
+**$ git archive master --prefix='project/' --format=zip > \`git describe master\`.zip**  
+
+### The Shortlog
 
