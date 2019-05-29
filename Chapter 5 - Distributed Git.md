@@ -461,5 +461,9 @@ You have a number of choices, so we’ll cover a few of them.
 #### Merging Workflows
 One basic workflow is to simply merge all that work directly into your master branch.  
 For instance, if we have a repository with work in two branches named ruby_client and php_client that looks like History with several topic branches., and we merge ruby_client followed by php_client, your history will end up looking like After a topic branch merge:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/IntegratingCW1.PNG)  
+If you have a more important project, you might want to use a two-phase merge cycle. In this scenario, you have two long-running branches, master and develop, in which you determine that master is updated only when a very stable release is cut and all new code is integrated into the develop branch.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/IntegratingCW2.PNG)  
+
 
 
