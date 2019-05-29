@@ -477,7 +477,9 @@ If you want to pull commit e43a6 into your master branch, you can run:
 **$ git cherry-pick e43a6**  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/integratingCW6.PNG)  
 #### Rerere
+Rerere stands for “reuse recorded resolution” — it’s a way of shortcutting manual conflict resolution. When rerere is enabled, Git will keep a set of pre- and post-images from successful merges, and if it notices that there’s a conflict that looks exactly like one you’ve already fixed, it’ll just use the fix from last time, without bothering you with it.  
 
+### Tagging Your Releases
 
 
 
