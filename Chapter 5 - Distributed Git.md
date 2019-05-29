@@ -466,6 +466,10 @@ If you have a more important project, you might want to use a two-phase merge cy
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/IntegratingCW2.PNG)  
 #### Large-Merging Workflows  
 The Git project has four long-running branches: master, next, and pu (proposed updates) for new work, and maint for maintenance backports.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/IntegratingCW3.PNG)  
+If the topics still need work, they’re merged into pu instead. When it’s determined that they’re totally stable, the topics are re-merged into master. The next and pu branches are then rebuilt from the master. This means master almost always moves forward, next is rebased occasionally, and pu is rebased even more often:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/IntegratingCW4.PNG)  
+#### Rebasing and Cherry-Picking Workflows
 
 
 
