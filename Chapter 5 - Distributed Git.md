@@ -498,6 +498,11 @@ Then, you can directly import the key into the Git database by exporting it and 
 **$ gpg -a --export F721C45A | git hash-object -w --stdin**  
 > 659ef797d181633c87ec71ac3f9ba29fe5775b92  
 
+You can create a tag that points directly to it by specifying the new SHA-1 value that the hash-object command gave you:  
+**$ git tag -a maintainer-pgp-pub 659ef797d181633c87ec71ac3f9ba29fe5775b92**  
+If you run git push --tags, the maintainer-pgp-pub tag will be shared with everyone. If anyone wants to verify a tag, they can directly import your PGP key by pulling the blob directly out of the database and importing it into GPG:  
+**$ git show maintainer-pgp-pub | gpg --import**  
 
+### Generating a Build Number
 
 
