@@ -489,7 +489,7 @@ user: "Scott Chacon <schacon@gmail.com>"
 If you do sign your tags, you may have the problem of distributing the public PGP key used to sign your tags. The maintainer of the Git project has solved this issue by including their public key as a blob in the repository and then adding a tag that points directly to that content.  
 **$ gpg --list-keys**  
 > /Users/schacon/.gnupg/pubring.gpg   
----------------------------------    
+\---------------------------------    
 pub 1024D/F721C45A 2009-02-09 [expires: 2010-02-09]  
 uid Scott Chacon <schacon@gmail.com>  
 sub 2048g/45D02282 2009-02-09 [expires: 2010-02-09]  
