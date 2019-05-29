@@ -456,5 +456,10 @@ Git provides another shorthand for doing the same thing: the triple-dot syntax:
 This command shows you only the work your current topic branch has introduced since its common ancestor with master.  
 
 ### Integrating Contributed Work
+When all the work in your topic branch is ready to be integrated into a more mainline branch, the question is how to do it.  
+You have a number of choices, so we’ll cover a few of them.  
+#### Merging Workflows
+One basic workflow is to simply merge all that work directly into your master branch.  
+For instance, if we have a repository with work in two branches named ruby_client and php_client that looks like History with several topic branches., and we merge ruby_client followed by php_client, your history will end up looking like After a topic branch merge:  
 
 
