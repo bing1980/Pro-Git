@@ -10,3 +10,9 @@ The way that GitHub maps your Git commits to your user is by email address. If y
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/email_address.PNG)  
 The top address is verified and set as the primary address, meaning that is where you’ll get any notifications and receipts. The second address is verified and so can be set as the primary if you wish to switch them. The final address is unverified, meaning that you can’t make it your primary address. If GitHub sees any of these in commit messages in any repository on the site, it will be linked to your user
 now.
+### Two Factor Authentication
+Two-factor Authentication is an authentication mechanism that is becoming more and more popular recently to mitigate the risk of your account being compromised if your password is stolen somehow.  
+You can find the Two-factor Authentication setup under the Security tab of your Account settings.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/2FA.PNG)  
+If you click on the “Set up two-factor authentication” button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a “time based one-time password”), or you can have GitHub send you a code via SMS each time you need to log in.  
+## Contributing to a Project
