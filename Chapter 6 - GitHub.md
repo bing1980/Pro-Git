@@ -20,3 +20,12 @@ If you click on the “Set up two-factor authentication” button, it will take 
 If you want to contribute to an existing project to which you don’t have push access, you can **“fork”** the project. When you “fork” a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.  
 People can fork a project, push to it, and contribute their changes back to the original repository by creating what’s called a **Pull Request,** and the owner and the contributor can then communicate, about the change until the owner is happy with it, at which point the owner can merge it in.  
 ### The GitHub Flow
+Here’s how it generally works:  
+1. Fork the project
+2. Create a topic branch from master.
+3. Make some commits to improve the project.
+4. Push this branch to your GitHub project.
+5. Open a Pull Request on GitHub.
+6. Discuss, and optionally continue committing.
+7. The project owner merges or closes the Pull Request.
+8. Sync the updated master back to your fork.
