@@ -48,7 +48,9 @@ Here is the basic procedures:
 
 #### References
 If you absolutely wish to rebase the branch to clean it up, you can certainly do so, but it is highly encouraged to not force push over the branch that the Pull Request is already opened on. Instead, push the rebased branch to a new branch on GitHub and open a brand new Pull Request referencing the old one, then close the original.  
+
 All Pull Requests and Issues are assigned numbers and they are unique within the project. If you want to reference any Pull Request or Issue from any other one, you can simply put **#\<num>** in any comment or description. You can also be more specific if the Issue or Pull request lives somewhere else; write **username#\<num>**.  
+
 Let’s look at an example. Say we rebased the branch in the previous example, created a new pull request for it, and now we want to reference the old pull request from the new one.  
 ![image]()  
 When we submit this pull request, we’ll see all of that rendered like **Cross references rendered** in a Pull Request..  
