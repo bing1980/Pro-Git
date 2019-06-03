@@ -33,3 +33,6 @@ Here’s how it generally works:
 Instead of using email to communicate and review changes, teams use GitHub’s web based tools.  
 ### Advanced Pull Requests
 #### Pull Requests as Patches
+It’s important to understand that many projects don’t really think of Pull Requests as queues of perfect patches that should apply cleanly in order, as most mailing list-based projects think of **patch series contributions**.  
+For instance, if you go back and look again at Pull Request final, you’ll notice that the contributor did not rebase his commit and send another Pull Request. Instead they added new commits and pushed them to the existing branch. This way if you go back and look at this Pull Request in the future, you can easily find all of the context of why decisions were made.  
+
