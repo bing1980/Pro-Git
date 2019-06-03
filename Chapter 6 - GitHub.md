@@ -52,9 +52,9 @@ If you absolutely wish to rebase the branch to clean it up, you can certainly do
 All Pull Requests and Issues are assigned numbers and they are unique within the project. If you want to reference any Pull Request or Issue from any other one, you can simply put **#\<num>** in any comment or description. You can also be more specific if the Issue or Pull request lives somewhere else; write **username#\<num>**.  
 
 Let’s look at an example. Say we rebased the branch in the previous example, created a new pull request for it, and now we want to reference the old pull request from the new one.  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/reference1.PNG)  
 When we submit this pull request, we’ll see all of that rendered like **Cross references rendered** in a Pull Request..  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/reference2.PNG)  
 Now if Tony goes back and closes out the original Pull Request, we can see that by mentioning it in the new one, GitHub has automatically created a trackback event in the Pull Request timeline. This means that anyone who visits this Pull Request and sees that it is closed can easily link back to the one that superseded it.  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/reference3.PNG)  
 ### GitHub Flavored Markdown
