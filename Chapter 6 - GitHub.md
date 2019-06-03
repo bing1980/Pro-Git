@@ -29,5 +29,6 @@ Here’s how it generally works:
 6. Discuss, and optionally continue committing.
 7. The project owner merges or closes the Pull Request.
 8. Sync the updated master back to your fork.  
+
 Instead of using email to communicate and review changes, teams use GitHub’s web based tools.  
 
