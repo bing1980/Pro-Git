@@ -31,4 +31,5 @@ Here’s how it generally works:
 8. Sync the updated master back to your fork.  
 
 Instead of using email to communicate and review changes, teams use GitHub’s web based tools.  
-
+### Advanced Pull Requests
+#### Pull Requests as Patches
