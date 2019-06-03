@@ -16,3 +16,5 @@ You can find the Two-factor Authentication setup under the Security tab of your 
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/2FA.PNG)  
 If you click on the “Set up two-factor authentication” button, it will take you to a configuration page where you can choose to use a phone app to generate your secondary code (a “time based one-time password”), or you can have GitHub send you a code via SMS each time you need to log in.  
 ## Contributing to a Project
+### Forking Projects
+If you want to contribute to an existing project to which you don’t have push access, you can “fork” the project. When you “fork” a project, GitHub will make a copy of the project that is entirely yours; it lives in your namespace, and you can push to it.  
