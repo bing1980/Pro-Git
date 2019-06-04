@@ -74,6 +74,7 @@ Emojis take the form of :<name>: anywhere in the comment. For instance, you coul
 When rendered, it would look something like this:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/emoji2.PNG)  
 
+### Keep your GitHub public repository up-to-date
 
 
 
