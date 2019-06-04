@@ -69,4 +69,11 @@ To add a snippet of code you have to “fence” it in backticks:
 It would end up rendering like:  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/code2.PNG)  
 #### Emoji
+Emojis take the form of :<name>: anywhere in the comment. For instance, you could write something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/emoji1.PNG)  
+When rendered, it would look something like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/emoji2.PNG)  
+
+
+
 
