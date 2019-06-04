@@ -58,6 +58,4 @@ When we submit this pull request, we’ll see all of that rendered like **Cross 
 Now if Tony goes back and closes out the original Pull Request, we can see that by mentioning it in the new one, GitHub has automatically created a trackback event in the Pull Request timeline. This means that anyone who visits this Pull Request and sees that it is closed can easily link back to the one that superseded it.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/reference3.PNG)  
 ### GitHub Flavored Markdown
-- [X] Write the code
-- [ ] Write all the tests
-- [ ] Document the code
+:eyes
