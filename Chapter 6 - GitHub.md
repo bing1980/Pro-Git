@@ -83,6 +83,7 @@ For example, if you forked from https://github.com/progit/progit2.git, you can k
 **$ git checkout master  
 $ git pull https://github.com/progit/progit2.git     
 $ git push origin master**  
+
 This works, but it is a little tedious having to spell out the fetch URL every time. You can automate this work with a bit of configuration:  
 **$ git remote add progit https://github.com/progit/progit2.git  
 $ git branch --set-upstream-to=progit/master master  
@@ -92,6 +93,6 @@ Once this done, the workflow becomes much simpler:
 $ git pull  
 $ git push**  
 
-
+## Maintaining a Project
 
 
