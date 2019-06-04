@@ -75,6 +75,23 @@ When rendered, it would look something like this:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/emoji2.PNG)  
 
 ### Keep your GitHub public repository up-to-date
+Once you’ve forked a GitHub repository, your repository (your "fork") exists **independently** from the original. In particular, when the original repository has new commits, GitHub informs you by a message like:   
+> This branch is 5 commits behind progit:master.  
+
+You can update your local repository in two ways:  
+For example, if you forked from https://github.com/progit/progit2.git, you can keep your master branch up-to-date like this:  
+**$ git checkout master  
+$ git pull https://github.com/progit/progit2.git     
+$ git push origin master**  
+This works, but it is a little tedious having to spell out the fetch URL every time. You can automate this work with a bit of configuration:  
+**$ git remote add progit https://github.com/progit/progit2.git  
+$ git branch --set-upstream-to=progit/master master  
+$ git config --local remote.pushDefault origin**  
+Once this done, the workflow becomes much simpler:  
+**$ git checkout master  
+$ git pull  
+$ git push**  
+
 
 
 
