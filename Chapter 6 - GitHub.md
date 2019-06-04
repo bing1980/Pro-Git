@@ -60,7 +60,7 @@ Now if Tony goes back and closes out the original Pull Request, we can see that 
 ### GitHub Flavored Markdown
 #### Task Lists
 You can create a task list like this:  
-![git](https://github.com/bing1980/Pro-Git/blob/master/img/tasklist1.PNG)  
-we’ll see it rendered like this:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/tasklist1.PNG)  
+We’ll see it rendered like this:    
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/tasklist2.PNG)  
 #### Code Snippets
