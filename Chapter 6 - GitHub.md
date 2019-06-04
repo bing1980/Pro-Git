@@ -64,3 +64,9 @@ You can create a task list like this:
 We’ll see it rendered like this:    
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/tasklist2.PNG)  
 #### Code Snippets
+To add a snippet of code you have to “fence” it in backticks:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/code1.PNG)  
+It would end up rendering like:  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/code2.PNG)  
+#### Emoji
+
