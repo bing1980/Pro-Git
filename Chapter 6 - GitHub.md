@@ -100,6 +100,10 @@ All you really have to do here is provide a project name; the rest of the fields
 Every project on GitHub is accessible over HTTPS as https://github.com/<user\>/\<project_name\>, and over SSH as git@github.com:<user>/<project_name>. Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.  
 
 ### Adding Collaborators
+If you’re working with other people who you want to give commit access to, you need to add them as “collaborators”.  
+![image]()  
+
+### Managing Pull Requests
 
 
 
