@@ -96,7 +96,8 @@ $ git push**
 ## Maintaining a Project
 ### Creating a New Repository
 All you really have to do here is provide a project name; the rest of the fields are completely optional. For now, just click the “Create Repository” button, and boom – you have a new repository on GitHub, named **\<user>/<project_name>**.  
-Every project on GitHub is accessible over HTTPS as https://github.com/<user>/<project_name>, and over SSH as git@github.com:<user>/<project_name>. Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.  
+
+Every project on GitHub is accessible over HTTPS as https://github.com/\<user\>/\<project_name\>, and over SSH as git@github.com:<user>/<project_name>. Git can fetch from and push to both of these URLs, but they are access-controlled based on the credentials of the user connecting to them.  
 
 ### Adding Collaborators
 
