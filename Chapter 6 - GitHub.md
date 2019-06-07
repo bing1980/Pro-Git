@@ -101,7 +101,7 @@ Every project on GitHub is accessible over HTTPS as https://github.com/<user\>/\
 
 ### Adding Collaborators
 If you’re working with other people who you want to give commit access to, you need to add them as “collaborators”.  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/collaborators.PNG)  
 
 ### Managing Pull Requests
 
