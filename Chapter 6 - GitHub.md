@@ -116,8 +116,22 @@ Once the code is in a place you like and want to merge it in, you can either pul
 If the merge is trivial, you can also just hit the “Merge” button on the GitHub site. This will do a “non-fast-forward” merge, creating a merge commit even if a fast-forward merge was possible.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/merge_button.PNG)  
 #### Pull Request Refs
+If you’re dealing with a lot of Pull Requests and don’t want to add a bunch of remotes or do one time pulls every time, you can run with the command **ls-remote**. We will get a list of all the branches and tags and other references in the repository.  
+**$ git ls-remote https://github.com/schacon/blink**  
+> 10d539600d86723087810ec636870a504f4fee4d HEAD  
+10d539600d86723087810ec636870a504f4fee4d refs/heads/master  
+6a83107c62950be9453aac297bb0193fd743cd6e refs/pull/1/head  
+afe83c2d1a70674c9505cc1d8b7d380d5e076ed3 refs/pull/1/merge  
 
+Of course, if you’re in your repository and you run **git ls-remote origin** or whatever remote you want to check, it will show you something similar to this.  
 
+There are two references per Pull Request - the one that ends in /head points to exactly the same commit as the last commit in the Pull Request branch. So if someone opens a Pull Request in our repository and their branch is named bug-fix and it points to commit a5a775, then in our repository we will not have a bug-fix branch (since that’s in their fork), but we will have pull/<pr#>/head that points to a5a775. This means that we can pretty easily pull down every Pull Request branch in one go without having to add a bunch of remotes.  
+Now, you could do something like fetching the reference directly.  
+**$ git fetch origin refs/pull/958/head**  
+> From https://github.com/libgit2/libgit2
+\* branch refs/pull/958/head -> FETCH_HEAD  
+
+This tells Git, “Connect to the origin remote, and download the ref named refs/pull/958/head.”
 
 
 
