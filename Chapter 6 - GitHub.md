@@ -104,6 +104,8 @@ If you’re working with other people who you want to give commit access to, you
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/collaborators.PNG)  
 
 ### Managing Pull Requests
+Pull Requests can either come from a branch in a fork of your repository or they can come from another branch in the same repository. The only difference is that the ones in a fork are often from people where you can’t push to their branch and they can’t push to yours, whereas with internal Pull Requests generally both parties can access the branch.  
+
 
 
 
