@@ -147,11 +147,15 @@ fetch = +refs/pull/\*/head:refs/remotes/origin/pr/\*
 That last line tells Git, “All the refs that look like refs/pull/123/head should be stored locally like refs/remotes/origin/pr/123.” Now, if you save that file, and do a git fetch:  
 **$ git fetch**  
 > \# …  
-* [new ref] refs/pull/1/head -> origin/pr/1  
-* [new ref] refs/pull/2/head -> origin/pr/2  
-* [new ref] refs/pull/4/head -> origin/pr/4  
+\* [new ref] refs/pull/1/head -> origin/pr/1  
+\* [new ref] refs/pull/2/head -> origin/pr/2  
+\* [new ref] refs/pull/4/head -> origin/pr/4  
 \# …  
 
+This makes it super easy to try the code from a pull request locally:  
+**$ git checkout pr/2**  
+
+#### Pull Requests on Pull Requests
 
 
 
