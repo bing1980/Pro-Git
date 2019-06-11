@@ -114,7 +114,7 @@ There are a few things to notice about this email. It will give you a small diff
 You can now have a conversation with the person who opened the Pull Request. You can comment on specific lines of code, someone else comments on the Pull Request you will continue to get email notifications, so you know there is activity happening.  
 Once the code is in a place you like and want to merge it in, you can either pull the code down and merge it locally, either with the **git pull \<url> \<branch>** syntax we saw earlier, or by adding the fork as a remote and fetching and merging.  
 If the merge is trivial, you can also just hit the “Merge” button on the GitHub site. This will do a “non-fast-forward” merge, creating a merge commit even if a fast-forward merge was possible.  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/merge_button.PNG)  
 #### Pull Request Refs
 
 
