@@ -138,6 +138,21 @@ There’s also a way to fetch all of the pull requests, and keep them up to date
 url = https://github.com/libgit2/libgit2  
 fetch = +refs/heads/*:refs/remotes/origin/\*  
 
+That line that begins with fetch = is a “refspec.” It’s a way of mapping names on the remote with names in your local .git directory. This particular one tells Git, "the things on the remote that are under refs/heads should go in my local repository under refs/remotes/origin." You can modify this section to add another refspec:  
+> \[remote "origin"]  
+url = https://github.com/libgit2/libgit2.git  
+fetch = +refs/heads/\*:refs/remotes/origin/\*  
+fetch = +refs/pull/\*/head:refs/remotes/origin/pr/\*  
+
+That last line tells Git, “All the refs that look like refs/pull/123/head should be stored locally like refs/remotes/origin/pr/123.” Now, if you save that file, and do a git fetch:  
+**$ git fetch**  
+> \# …  
+* [new ref] refs/pull/1/head -> origin/pr/1  
+* [new ref] refs/pull/2/head -> origin/pr/2  
+* [new ref] refs/pull/4/head -> origin/pr/4  
+\# …  
+
+
 
 
 
