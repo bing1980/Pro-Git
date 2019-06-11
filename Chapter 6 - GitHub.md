@@ -105,6 +105,13 @@ If you’re working with other people who you want to give commit access to, you
 
 ### Managing Pull Requests
 Pull Requests can either come from a branch in a fork of your repository or they can come from another branch in the same repository. The only difference is that the ones in a fork are often from people where you can’t push to their branch and they can’t push to yours, whereas with internal Pull Requests generally both parties can access the branch.  
+#### Email Notifications
+Someone comes along and makes a change to your code and sends you a Pull Request. You should get an email notifying you about the new Pull Request.  
+There are a few things to notice about this email. It will give you a small diffstat — a list of files that have changed in the Pull Request and by how much. It gives you a link to the Pull Request on GitHub. It also gives you a few URLs that you can use from the command line. You could technically merge in the Pull Request work with something like this:   
+**$ curl https://github.com/tonychacon/fade/pull/1.patch | git am**  
+
+#### Collaborating on the Pull Request
+
 
 
 
