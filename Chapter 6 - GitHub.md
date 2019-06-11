@@ -128,10 +128,15 @@ Of course, if you’re in your repository and you run **git ls-remote origin** o
 There are two references per Pull Request - the one that ends in /head points to exactly the same commit as the last commit in the Pull Request branch. So if someone opens a Pull Request in our repository and their branch is named bug-fix and it points to commit a5a775, then in our repository we will not have a bug-fix branch (since that’s in their fork), but we will have pull/<pr#>/head that points to a5a775. This means that we can pretty easily pull down every Pull Request branch in one go without having to add a bunch of remotes.  
 Now, you could do something like fetching the reference directly.  
 **$ git fetch origin refs/pull/958/head**  
-> From https://github.com/libgit2/libgit2
+> From https://github.com/libgit2/libgit2  
 \* branch refs/pull/958/head -> FETCH_HEAD  
 
 This tells Git, “Connect to the origin remote, and download the ref named refs/pull/958/head.”
+
+There’s also a way to fetch all of the pull requests, and keep them up to date whenever you connect to the remote. Open up .git/config in your favorite editor, and look for the origin remote. It should look a bit like this:  
+> \[remote "origin"]  
+url = https://github.com/libgit2/libgit2  
+fetch = +refs/heads/*:refs/remotes/origin/\*  
 
 
 
