@@ -162,8 +162,16 @@ When you go to open a Pull Request, there is a box at the top of the page that s
 Here you can fairly easily specify to merge your new branch into another Pull Request or another fork of the project.
 
 ### Mentions and Notifications
+#### Mentions
 In any comment you can start typing a **@** character and it will begin to autocomplete with the names and usernames of people who are collaborators or contributors in the project.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/mention.PNG)  
+Once you post a comment with a user mention, that user will be notified.  
+If someone gets mentioned on a Pull Request or Issue, they will be “subscribed” to it and will continue getting notifications any time some activity occurs on it.  
+If you no longer wish to receive notifications, there is an “Unsubscribe” button on the page you can click to stop receiving updates on it.  
+#### Notifications
+If you go to the “Notification center” tab from the settings page, you can see some of the options you have.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/notification.PNG)  
 
+### Special Files  
 
 
