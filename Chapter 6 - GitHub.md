@@ -162,6 +162,8 @@ When you go to open a Pull Request, there is a box at the top of the page that s
 Here you can fairly easily specify to merge your new branch into another Pull Request or another fork of the project.
 
 ### Mentions and Notifications
+In any comment you can start typing a **@** character and it will begin to autocomplete with the names and usernames of people who are collaborators or contributors in the project.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/mention.PNG)  
 
 
 
