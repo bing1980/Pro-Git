@@ -173,5 +173,7 @@ If you go to the “Notification center” tab from the settings page, you can s
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/notification.PNG)  
 
 ### Special Files  
+There are a couple of special files that GitHub will notice if they are present in your repository.  
+#### README
 
 
