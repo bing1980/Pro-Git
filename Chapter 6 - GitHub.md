@@ -177,10 +177,12 @@ There are a couple of special files that GitHub will notice if they are present 
 #### README
 The first is the README file, which can be of nearly any format that GitHub recognizes as prose. For example, it could be README, README.md, README.asciidoc, etc. If GitHub sees a README file in your source, it will render it on the landing page of the project.  
 This generally includes things like:  
-• What the project is for
-• How to configure and install it
-• An example of how to use it or get it running
-• The license that the project is offered under
-• How to contribute to it
+* What the project is for  
+* How to configure and install it  
+* An example of how to use it or get it running  
+* The license that the project is offered under  
+* How to contribute to it  
+
+#### CONTRIBUTING
 
 
