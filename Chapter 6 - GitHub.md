@@ -182,7 +182,9 @@ This generally includes things like:
 * An example of how to use it or get it running  
 * The license that the project is offered under  
 * How to contribute to it  
-
 #### CONTRIBUTING
+The other special file that GitHub recognizes is the CONTRIBUTING file. If you have a file named CONTRIBUTING with any file extension, GitHub will show Opening a Pull Request when a CONTRIBUTING file exists. when **anyone starts opening a Pull Request**.  
 
+### Project Administration
+#### Changing the Default Branch
 
