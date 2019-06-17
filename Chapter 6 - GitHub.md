@@ -187,4 +187,6 @@ The other special file that GitHub recognizes is the CONTRIBUTING file. If you h
 
 ### Project Administration
 #### Changing the Default Branch
-
+If you are using a branch other than “master” as your default branch that you want people to open Pull Requests on or see by default, you can change that in your repository’s settings page under the “Options” tab.  
+![image]()   
+#### Transferring a Project
