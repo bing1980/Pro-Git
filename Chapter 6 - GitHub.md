@@ -201,5 +201,6 @@ First you’ll need to name your organization and provide an email address for a
 ### Teams
 Organizations are associated with individual people by way of teams, which are simply a grouping of individual user accounts and repositories within the organization and what kind of access those people have in those repositories.  
 For example, say your company has three repositories: frontend, backend, and deployscripts. You’d want your HTML/CSS/JavaScript developers to have access to frontend and maybe backend, and your Operations people to have access to backend and deployscripts.  
-![image]()  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/organization.JPG)  
+
 
