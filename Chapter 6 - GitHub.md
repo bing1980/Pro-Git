@@ -202,5 +202,14 @@ First you’ll need to name your organization and provide an email address for a
 Organizations are associated with individual people by way of teams, which are simply a grouping of individual user accounts and repositories within the organization and what kind of access those people have in those repositories.  
 For example, say your company has three repositories: frontend, backend, and deployscripts. You’d want your HTML/CSS/JavaScript developers to have access to frontend and maybe backend, and your Operations people to have access to backend and deployscripts.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/organization.JPG)  
+To manage your Teams, you can click on the Teams sidebar on the right hand side of the page in The Organization page.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/team.JPG)  
+A user can belong to any number of teams, so don’t limit yourself to only access-control teams.  
+### Audit Log  
+You can go to the Audit Log tab and see what events have happened at an organization level, who did them and where in the world they were done.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/auditlog.JPG)  
+
+## Scripting GitHub
+
 
 
