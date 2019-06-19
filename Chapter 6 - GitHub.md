@@ -194,3 +194,12 @@ If you would like to transfer a project to another user or an organization in Gi
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/transfer_project.PNG)  
 
 ## Managing an organization
+Like personal accounts, Organizational accounts have a namespace where all their projects exist, but many other things are different. These accounts represent a group of people with shared ownership of projects, and there are many tools to manage subgroups of those people.  
+### Organization Basics
+An organization is pretty easy to create; just click on the “+” icon at the top-right of any GitHub page, and select “New organization” from the menu.  
+First you’ll need to name your organization and provide an email address for a main point of contact for the group. Then you can invite other users to be co-owners of the account if you want to.  
+### Teams
+Organizations are associated with individual people by way of teams, which are simply a grouping of individual user accounts and repositories within the organization and what kind of access those people have in those repositories.  
+For example, say your company has three repositories: frontend, backend, and deployscripts. You’d want your HTML/CSS/JavaScript developers to have access to frontend and maybe backend, and your Operations people to have access to backend and deployscripts.  
+![image]()  
+
