@@ -210,6 +210,9 @@ You can go to the Audit Log tab and see what events have happened at an organiza
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/auditlog.JPG)  
 
 ## Scripting GitHub
+GitHub is really quite hackable in many ways. In this section we’ll cover how to use the **GitHub hooks system and its API** to make GitHub work how we want it to.  
+### Services and Hooks
+#### Services
 
 
 
