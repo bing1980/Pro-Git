@@ -221,6 +221,9 @@ configuration screen like:
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/email_service.JPG)  
 In this case, if we hit the “Add service” button, the email address we specified will get an email every time someone pushes to the repository.  
 #### Hooks
+If you need something more specific or you want to integrate with a service or site that is not included in this list, you can instead use the more generic hooks system. Generally the way this works is you can setup a small web service to listen for a GitHub hook payload and then do something with the data when it is received.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/web_hook.JPG)  
+
 
 
 
