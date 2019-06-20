@@ -223,7 +223,10 @@ In this case, if we hit the “Add service” button, the email address we speci
 #### Hooks
 If you need something more specific or you want to integrate with a service or site that is not included in this list, you can instead use the more generic hooks system. Generally the way this works is you can setup a small web service to listen for a GitHub hook payload and then do something with the data when it is received.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/web_hook.JPG)  
-
+There are a few options for which events you want GitHub to send you a payload for — the default is to only get a payload for the push event, when someone pushes new code to any branch of your repository.  
+Let’s see a small example of a web service you may set up to handle a web hook. We’ll use the **Ruby web framework Sinatra** since it’s fairly concise and you should be able to easily see what we’re doing.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/ruby.JPG)  
+### The GitHub API
 
 
 
