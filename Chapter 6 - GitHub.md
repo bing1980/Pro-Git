@@ -234,7 +234,7 @@ The most basic thing you can do is a simple GET request on an endpoint that does
 "login": "schacon",  
 "id": 70,  
 "avatar_url": "https://avatars.githubusercontent.com/u/70",  
-/# …  
+\# …  
 "name": "Scott Chacon",  
 "company": "GitHub",  
 "following": 19,  
