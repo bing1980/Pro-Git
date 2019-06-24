@@ -251,5 +251,14 @@ Let’s say we want to leave a comment on a specific issue, Issue #6. To do so w
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/comment_API.JPG)   
 
 #### Changing the Status of a Pull Request
+If you’re working with Pull Requests. Each commit can have one or more statuses associated with it and there is an API to add and query
+that status. Most of the Continuous Integration and testing services make use of this API to react to pushes by testing the code that was pushed, and then report back if that commit has passed all the tests.  
+Let’s say you set up a webhook on your repository that hits a small web service that checks for a Signed-off-by string in the commit message.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/status_API.JPG)   
+In this case you can send a state (success, failure, error), a description of what happened, a target URL the user can go to for more information and a “context” in case there are multiple statuses for a single commit.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/commit_status.JPG)   
+
+#### Octokit
+
 
 
