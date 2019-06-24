@@ -258,7 +258,5 @@ Let’s say you set up a webhook on your repository that hits a small web servic
 In this case you can send a state (success, failure, error), a description of what happened, a target URL the user can go to for more information and a “context” in case there are multiple statuses for a single commit.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/commit_status.JPG)   
 
-#### Octokit
-
 
 
