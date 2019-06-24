@@ -227,6 +227,21 @@ There are a few options for which events you want GitHub to send you a payload f
 Let’s see a small example of a web service you may set up to handle a web hook. We’ll use the **Ruby web framework Sinatra** since it’s fairly concise and you should be able to easily see what we’re doing.  
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/ruby.JPG)  
 ### The GitHub API
+#### Basic Usage
+The most basic thing you can do is a simple GET request on an endpoint that doesn’t require authentication. For example, if we want to know more about a user named “schacon”, we can run something like this:  
+**$ curl https://api.github.com/users/schacon**  
+> {  
+"login": "schacon",  
+"id": 70,  
+"avatar_url": "https://avatars.githubusercontent.com/u/70",  
+/# …  
+"name": "Scott Chacon",  
+"company": "GitHub",  
+"following": 19,  
+"created_at": "2008-01-27T17:19:28Z",  
+"updated_at": "2014-06-10T02:37:23Z"  
+}  
 
+#### Commenting on an Issue
 
 
