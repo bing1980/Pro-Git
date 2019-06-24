@@ -248,5 +248,8 @@ There are several ways to authenticate. You can use basic authentication with ju
 ![image](https://github.com/bing1980/Pro-Git/blob/master/img/access_token.JPG)  
 GitHub will only show you the token once, so be sure to copy it. You can now use this to authenticate in your script instead of using a username and password. This is nice because you can limit the scope of what you want to do and the token is revocable.  
 Let’s say we want to leave a comment on a specific issue, Issue #6. To do so we have to do an HTTP POST request to repos/<user\>/<repo\>/issues/<num\>/comments with the token we just generated as an Authorization header.  
+![image](https://github.com/bing1980/Pro-Git/blob/master/img/comment_API.JPG)   
+
+#### Changing the Status of a Pull Request
 
 
